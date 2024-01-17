@@ -1,4 +1,4 @@
-# WiseTime-RM
+# WiseTime-Rm
 
 ### STATUS: DEVELOPMENT
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
