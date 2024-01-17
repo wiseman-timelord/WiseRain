@@ -59,7 +59,7 @@ DownloadFileName05.Ext
 4. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 2 panels from `WiseTime-Rm", `system.ini` and `network.ini`, as you normally would.   
 
 ### REQUIREMENTS
-1. RainMeter.
+1. [RainMeter](https://www.rainmeter.net/).
 2. Powershell => 3.0.
 3. [PowershellRM](https://github.com/khanhas/PowershellRM)
 
