@@ -2,7 +2,7 @@
 
 ### STATUS: DEVELOPMENT
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
-- Additional stats, making use of a psd1 file.
+- Additional stats, making use of a psd1 file, ariables cannot sustain changes, however, with the addition of a psd1, and knowing the interface refresh speed, it is possible to write to the psd1 each time, and use this to calculate difference, for example, for calculating data transfer rates.
 - Possibly a stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
 
 ## DESCRIPTION
@@ -63,7 +63,7 @@ DownloadFileName05.Ext
 3. [PowershellRM](https://github.com/khanhas/PowershellRM)
 
 ### NOTATION
-- RainMeter will flash up a script, you cannot use loops, hence, variables cannot sustain changes, however, with the addition of a psd1, and knowing the interface refresh speed, it is possible to write to the psd1 each time, and use this to calculate difference, for example, for calculating data transfer rates. 
+- RainMeter will flash up a script, you cannot use loops, hence, variables cannot sustain changes, however, without writing to a psd1 each time.
 
 ## DISCLAIMER
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
