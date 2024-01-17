@@ -56,7 +56,7 @@ DownloadFileName05.Ext
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
 2. Download `Wiseman-Timelords Rainmeter Skin`, and then unpack it to a suitable location.
 3. Copy the `WiseTime-Rm` folder into your `RainMeter\Skins` folder.
-4. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 2 panels from `WiseTime-Rm", `system.ini` and `network.ini`, as you normally would.   
+4. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 2 panels from `WiseTime-Rm` named, `system.ini` and `network.ini`, as you normally would the panels of other skins.   
 
 ### REQUIREMENTS
 1. [RainMeter](https://www.rainmeter.net/).
