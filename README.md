@@ -63,7 +63,7 @@ DownloadFileName05.Ext
 3. [PowershellRM](https://github.com/khanhas/PowershellRM)
 
 ### NOTATION
-- RainMeter will flash up a script, you cannot use loops, hence, variables cannot sustain changes, however, without writing to a psd1 each time.
+- RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes.
 
 ## DISCLAIMER
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
