@@ -2,6 +2,7 @@
 
 ### STATUS: DEVELOPMENT
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
+- Figure out what forms of stats are desired in the panels, and how many panels.
 - Additional stats, making use of a psd1 file and knowing the interface refresh speed, it is possible to write to the psd1 each time, and use this to calculate difference, for example, for calculating data transfer rates.
 - Possibly a stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
 
