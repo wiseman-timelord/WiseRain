@@ -65,7 +65,7 @@ DownloadFileName05.Ext
 
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes.
-- Out of interest, yes it would be possible to use additional plugins for input on panels, then use rainmeter as a gui for llm chatbot interface with multi-panel output.
+- Out of curiosity, yes it would be possible to use additional plugins for input on panels, then use rainmeter as a gui for llm chatbot interface with multi-panel output.
 
 ## DISCLAIMER
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
