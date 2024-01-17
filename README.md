@@ -6,8 +6,7 @@ This is a work in progress, progress will be slow, occasionally it will be impro
 - Possibly a stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
 
 ## DESCRIPTION
-Here is the official Wiseman-Timelord RainMeter skin, it ain't nothing special, but there is one.
-This skin uses "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin, the current version is a great starting place, with all of the basic requirements in place. 
+Here is the official Wiseman-Timelord RainMeter skin, it ain't nothing special, but there is one. This skin uses "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin, the current version is a great starting place, with all of the basic requirements in place.
 
 ### FEATURES
 - ** Dark Theme **: Designed for dark-themed desktops, where the background is dark-grey and the text is light-grey or white.
@@ -62,6 +61,9 @@ DownloadFileName05.Ext
 1. [RainMeter](https://www.rainmeter.net/).
 2. Powershell => 3.0.
 3. [PowershellRM](https://github.com/khanhas/PowershellRM)
+
+### NOTATION
+- RainMeter will flash up a script, you cannot use loops, hence, variables cannot sustain changes, however, with the addition of a psd1, and knowing the interface refresh speed, it is possible to write to the psd1 each time, and use this to calculate difference, for example, for calculating data transfer rates. 
 
 ## DISCLAIMER
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
