@@ -25,6 +25,11 @@ System..
 Processor Info:
 CXX/TXX - X% - XXXXMHz
 
+Temporary Spaces:
+Memory - XX.XGB/XX.XGB
+RamDrive1 - XX.XGB/XX.XGB
+Ramdrive2 - XX.XGB/XX.XGB 
+
 Large Processes:
 ProcessName01 - XXX.X MB
 ProcessName02 - XXX.X MB
@@ -32,11 +37,6 @@ ProcessName03 - XXX.X MB
 ProcessName04 - XXX.X MB
 ProcessName05 - XXX.X MB
 
-Temporary Spaces:
-Memory - XX.XGB/XX.XGB
-RamDrive1 - XX.XGB/XX.XGB
-Ramdrive2 - XX.XGB/XX.XGB 
- 
 ```
 Network..
 ```
