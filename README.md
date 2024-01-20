@@ -8,13 +8,14 @@ This is a work in progress, progress will be slow, occasionally it will be impro
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, it ain't nothing special, but there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
 - Version 1.00 is a good base with a timer of 5000, though I advise changing this to 10000.
-- Version >1.02, has a psd1 and uses a timer of 15000, requiring saving each time of <1kb temp file.
+- Version =>1.02, has a psd1 and uses a timer of 15000, requiring saving each time of <1kb temp file.
+
 
 ### FEATURES
 - ** Dark Theme **: Designed for dark-themed desktops, where the background is dark-grey and the text is light-grey or white.
 - ** User Friendly **: Use of powershell scripts with clearly commented global variables at the top, for customized readings.
 - ** Multi-Panel **: Currently has 2 panels, System and Network.
-- ** Plugin Enhancement **: Use of "PowershellRM", for enhanced powershell support.
+- ** Plugin Enhancement **: Use of "PowershellRM" with, Ps1s and Psd1 (=>v1.02), for enhanced powershell support.
 
 ## PREVIEW
 System..
