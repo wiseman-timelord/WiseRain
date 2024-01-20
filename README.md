@@ -8,7 +8,7 @@ This is a work in progress, progress will be slow, occasionally it will be impro
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
 - Version 1.00 is a good lightweight base with a timer of 5000, though I advise changing this to 10000.
-- Version 1.05, has a few more, features and improvements, with a timer of 15000, and uses a Psd1 file requiring saving each iteration of a <1kb temp file.
+- Version => 1.05, has a few more, features and improvements, with a timer of 15000, and uses a Psd1 file requiring saving each iteration of a <1kb temp file.
 - The distinction between Versions 1.05a/b is related to the theme of panel titles, either it is, in the middle "-= TITLE =-" or across the whole thing "=== TITLE ===".
 
 ### FEATURES
@@ -73,7 +73,6 @@ DownloadFileName05.Ext
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes.
 - It is possible to use additional plugins for input on panels, then use rainmeter as a gui for powershell projects.
-- 
 
 ## DISCLAIMER
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
