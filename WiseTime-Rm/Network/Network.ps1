@@ -14,7 +14,7 @@ function Get-ConnectionInfo {
         }
     } catch {
         Write-Host "Error fetching netstat data: $_"
-        return "Unable to fetch connection data"
+        return "Unavailable Or Disconnected"
     }
 
     $connections = @{}
