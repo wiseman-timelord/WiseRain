@@ -93,7 +93,7 @@ function Update {
     $downloadsInfo = Get-DownloadsInfo -join "`n"
 
     $output = @(
-        "            -= Network Panel =-",
+        "====== Network Panel =====",
         "`nCurrent Connections:",
         $connectionInfo,
         "`nTransfer Rates:",

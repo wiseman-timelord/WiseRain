@@ -75,8 +75,8 @@ function Update {
 
 
     $output = @(
-        "             -= System Panel =-",
-        "`nProcessor Info:",
+        "====== System Panel ======",
+		"`nProcessor Info:",
         $processorInfo,
         "`nMemory Info:",
         $memoryInfo,
@@ -84,7 +84,6 @@ function Update {
         $tempSlDiskInfo,
         "`nLarge Processes:",
         $processInfo
-
     ) -join "`n"
 
     # Output the final result
