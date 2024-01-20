@@ -24,20 +24,6 @@ function Get-ProcessorInfo {
     }
 }
 
-# Function Get Processinfo
-function Get-ProcessInfo {
-    $processes = Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 5
-    $processInfo = $processes | ForEach-Object {
-        $processName = $_.ProcessName
-        if ($processName.Length -gt 13) {
-            $processName = $processName.Substring(0, 13) + "..."
-        }
-        $memoryUsage = '{0:N1}' -f ($_.WorkingSet64 / 1MB)
-        "$processName - $memoryUsage MB"
-    }
-    return $processInfo -join "`n"
-}
-
 # Function Get MemoryInfo
 function Get-MemoryInfo {
     $mem = Get-CimInstance -ClassName Win32_OperatingSystem
@@ -65,24 +51,40 @@ function Get-TempSlDiskInfo {
     return "$global:TempSlDriveName - $used GB / $total GB"
 }
 
+# Function Get Processinfo
+function Get-ProcessInfo {
+    $processes = Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 5
+    $processInfo = $processes | ForEach-Object {
+        $processName = $_.ProcessName
+        if ($processName.Length -gt 13) {
+            $processName = $processName.Substring(0, 13) + "..."
+        }
+        $memoryUsage = '{0:N1}' -f ($_.WorkingSet64 / 1MB)
+        "$processName - $memoryUsage MB"
+    }
+    return $processInfo -join "`n"
+}
+
 # Constructing the final output with explicit new line separation
 function Update {
     $processorInfo = Get-ProcessorInfo
-    $processInfo = Get-ProcessInfo -join "`n"
     $memoryInfo = Get-MemoryInfo
     $tempOsDiskInfo = Get-TempOsDiskInfo
     $tempSlDiskInfo = Get-TempSlDiskInfo
+    $processInfo = Get-ProcessInfo -join "`n"
+
 
     $output = @(
         "             -= System Panel =-",
         "`nProcessor Info:",
         $processorInfo,
-        "`nLarge Processes:",
-        $processInfo,
         "`nMemory Info:",
         $memoryInfo,
         $tempOsDiskInfo,
-        $tempSlDiskInfo
+        $tempSlDiskInfo,
+        "`nLarge Processes:",
+        $processInfo
+
     ) -join "`n"
 
     # Output the final result
