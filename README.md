@@ -30,8 +30,9 @@ ProcessName04 - XXX.X MB
 ProcessName05 - XXX.X MB
 
 Temporary Spaces:
-Memory - XX.X GB / XX.X GB
-RamDrive - XX.X GB / XX.X GB
+Memory - XX.XGB/XX.XGB
+RamDrive1 - XX.XGB/XX.XGB
+Ramdrive2 - XX.XGB/XX.XGB 
  
 ```
 Network..
