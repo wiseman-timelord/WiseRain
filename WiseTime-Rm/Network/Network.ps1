@@ -1,7 +1,9 @@
-# Script: Network.ps1
-
 # Variables
 $global:DownloadsFolderPath = "E:\Downloads" # Downloads Folder Path
+$dataFilePath = ".\Data.Psd1" # Path to the data file
+
+# Import data file
+$data = Import-PowerShellDataFile -Path $dataFilePath
 
 # Function Get Connectioninfo
 function Get-ConnectionInfo {
@@ -24,7 +26,7 @@ function Get-ConnectionInfo {
         $ip = $ipPort[0]
 
         # Determine the direction of the connection
-        $direction = if ($ip -eq "127.0.0.1" -or $ip -eq "::1") { "In " } else { "Out" }
+        $direction = if ($ip -eq "127.0.0.1" -or $ip -eq "::1") { "Inbound " } else { "Outbound" }
 
         # Generate a unique key for each direction and IP
         $connectionKey = "$direction,$ip"
@@ -37,6 +39,33 @@ function Get-ConnectionInfo {
 
     # Return the unique connections
     return $connections.Values -join "`n"
+}
+
+# Function to get current network statistics
+function Get-NetworkStatistics {
+    $networkInterface = Get-NetAdapterStatistics | Select-Object -First 1
+    $currentInbound = $networkInterface.ReceivedBytes
+    $currentOutbound = $networkInterface.SentBytes
+
+    # Calculate the difference in KB (Kilobytes)
+    $inRate = ($currentInbound - $data.LastInbound) / 1KB / 15  # Assuming the script runs every 15 seconds
+    $outRate = ($currentOutbound - $data.LastOutbound) / 1KB / 15
+
+    # Update the data file with current statistics
+    $data.LastInbound = $currentInbound
+    $data.LastOutbound = $currentOutbound
+    $dataContent = @"
+@{
+    LastInbound = $($data.LastInbound)
+    LastOutbound = $($data.LastOutbound)
+}
+"@
+    Set-Content -Path $dataFilePath -Value $dataContent
+
+    return @{
+        InRate = [math]::Round($inRate, 2)
+        OutRate = [math]::Round($outRate, 2)
+    }
 }
 
 # Function Get Downloadsinfo
@@ -53,18 +82,23 @@ function Get-DownloadsInfo {
 }
 
 # Collecting output from each function
+$networkStats = Get-NetworkStatistics
 $connectionInfo = Get-ConnectionInfo -join "`n"
 $downloadsInfo = Get-DownloadsInfo -join "`n"
 
-# Function Update: Constructing the final output with explicit new line separation
+# Function Update: Constructing the final output
 function Update {
+    $networkStats = Get-NetworkStatistics
     $connectionInfo = Get-ConnectionInfo -join "`n"
     $downloadsInfo = Get-DownloadsInfo -join "`n"
 
     $output = @(
-        "            -= Network Panel =-"
+        "            -= Network Panel =-",
         "`nCurrent Connections:",
         $connectionInfo,
+        "`nTransfer Rates:",
+        "Inbound - $($networkStats.InRate) KB/s",
+        "Outbound - $($networkStats.OutRate) KB/s",
         "`nRecent Downloads:",
         $downloadsInfo
     ) -join "`n"

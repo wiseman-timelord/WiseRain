@@ -1,15 +1,27 @@
 # Script: System.ps1
 
 # Global Variables
-$global:TempDriveLetter = "R" # Temp Drive Letter
-$global:TempDriveName = "Ramdrive" # Temp Drive Name
+$global:TempOsDriveLetter = "R" # Temp Drive Letter
+$global:TempOsDriveName = "RamDriveOs" # Temp Drive Name
+$global:TempSlDriveLetter = "S" # Temp Drive Letter
+$global:TempSlDriveName = "RamDriveSl" # Temp Drive Name
 
-# Function Get CPUInfo
-function Get-CPUInfo {
-    $cpuUsage = Get-Counter '\Processor(_Total)\% Processor Time' | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue
-    $cpuClockSpeed = Get-WmiObject Win32_Processor | Select-Object -ExpandProperty MaxClockSpeed
-    $formattedCpuUsage = [math]::Round($cpuUsage, 0)
-    return "$formattedCpuUsage% - ${cpuClockSpeed}MHz"
+# Function to get processor information
+function Get-ProcessorInfo {
+    # Getting CPU load and speed
+    $cpuLoad = Get-WmiObject Win32_Processor | Measure-Object -Property LoadPercentage -Average
+    $cpuSpeed = Get-WmiObject Win32_Processor | Select-Object -ExpandProperty CurrentClockSpeed
+
+    # Getting number of cores and threads
+    $cores = (Get-WmiObject Win32_Processor | Measure-Object -Property NumberOfCores -Sum).Sum
+    $threads = (Get-WmiObject Win32_Processor | Measure-Object -Property NumberOfLogicalProcessors -Sum).Sum
+
+    # Format the output
+    if ($cores -and $threads) {
+        return "C$cores/T$threads - $($cpuLoad.Average)% - ${cpuSpeed}MHz"
+    } elseif ($threads) {
+        return "T$threads - $($cpuLoad.Average)% - ${cpuSpeed}MHz"
+    }
 }
 
 # Function Get Processinfo
@@ -35,42 +47,47 @@ function Get-MemoryInfo {
     return "Memory - $usedMemory GB / $totalMemory GB"
 }
 
-# Function Get Ramdiskinfo
-function Get-TempDiskInfo {
-    $ramDisk = Get-PSDrive $global:TempDriveLetter | Select-Object Used, Free
-    $used = [math]::Round($ramDisk.Used / 1GB, 1)
-    $free = [math]::Round($ramDisk.Free / 1GB, 1)
+# Function Get Ramdiskinfo for TempOs
+function Get-TempOsDiskInfo {
+    $OsRamDisk = Get-PSDrive $global:TempOsDriveLetter | Select-Object Used, Free
+    $used = [math]::Round($OsRamDisk.Used / 1GB, 1)
+    $free = [math]::Round($OsRamDisk.Free / 1GB, 1)
     $total = $used + $free
-    return "$global:TempDriveName - $used GB / $total GB"
+    return "$global:TempOsDriveName - $used GB / $total GB"
 }
 
-# Collecting output from each function
-$processInfo = Get-ProcessInfo -join "`n"
-$memoryInfo = Get-MemoryInfo
-$ramDiskInfo = Get-TempDiskInfo
+# Function Get Ramdiskinfo for TempSl
+function Get-TempSlDiskInfo {
+    $SlRamDisk = Get-PSDrive $global:TempSlDriveLetter | Select-Object Used, Free
+    $used = [math]::Round($SlRamDisk.Used / 1GB, 1)
+    $free = [math]::Round($SlRamDisk.Free / 1GB, 1)
+    $total = $used + $free
+    return "$global:TempSlDriveName - $used GB / $total GB"
+}
 
 # Constructing the final output with explicit new line separation
 function Update {
-    $cpuInfo = Get-CPUInfo
+    $processorInfo = Get-ProcessorInfo
     $processInfo = Get-ProcessInfo -join "`n"
     $memoryInfo = Get-MemoryInfo
-    $tempDiskInfo = Get-TempDiskInfo
+    $tempOsDiskInfo = Get-TempOsDiskInfo
+    $tempSlDiskInfo = Get-TempSlDiskInfo
 
     $output = @(
-        "             -= System Panel =-"
-		"`nProcessor Info:"
-		$cpuInfo,
+        "             -= System Panel =-",
+        "`nProcessor Info:",
+        $processorInfo,
         "`nLarge Processes:",
         $processInfo,
-        "`nTemporary Spaces:",
+        "`nMemory Info:",
         $memoryInfo,
-        $tempDiskInfo
+        $tempOsDiskInfo,
+        $tempSlDiskInfo
     ) -join "`n"
 
     # Output the final result
     $output
 }
-
 
 # Output the final result
 Update
