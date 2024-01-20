@@ -20,8 +20,7 @@ Here is the official Wiseman-Timelord RainMeter skin, it ain't nothing special, 
 ## PREVIEW
 System Panel..
 ```
-    -= System Panel =-
-
+====== System Panel ======
 Processor Info:
 CXX/TXX - X% - XXXXMHz
 
@@ -40,7 +39,7 @@ ProcessName05 - XXX.X MB
 ```
 Network Panel..
 ```
-    -= Network Panel =-
+====== Network Panel =====
 
 Current Connections:
 In - XXX.X.X.X
