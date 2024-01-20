@@ -6,7 +6,9 @@ This is a work in progress, progress will be slow, occasionally it will be impro
 - A task list panel with input, self-maintenence/prioritizing.
 
 ## DESCRIPTION
-Here is the official Wiseman-Timelord RainMeter skin, it ain't nothing special, but there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts, the current version is a great starting place, with all of the basic requirements in place.
+Here is the official Wiseman-Timelord RainMeter skin, it ain't nothing special, but there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
+- Version 1.00 is a good base with a timer of 5000 (i think).
+- Version >1.02, has a psd1 and uses a timer of 15000, requiring saving each time of <1kb temp file.
 
 ### FEATURES
 - ** Dark Theme **: Designed for dark-themed desktops, where the background is dark-grey and the text is light-grey or white.
