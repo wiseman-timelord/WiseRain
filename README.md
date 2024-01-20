@@ -2,9 +2,8 @@
 
 ### STATUS: DEVELOPMENT
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
-- Figure out what forms of stats are desired in the panels, and how many panels.
-- Additional stats, making use of a psd1 file and knowing the interface refresh speed, it is possible to write to the psd1 each time, and use this to calculate difference, for example, for calculating data transfer rates.
-- Possibly a stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
+- A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
+- A task list panel with input, self-maintenence/prioritizing.
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, it ain't nothing special, but there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts, the current version is a great starting place, with all of the basic requirements in place.
@@ -21,7 +20,7 @@ System..
     -= System Panel =-
 
 Processor Info:
-X% - XXXXMHz
+CXX/TXX - X% - XXXXMHz
 
 Large Processes:
 ProcessName01 - XXX.X MB
@@ -42,6 +41,10 @@ Network..
 Current Connections:
 In - XXX.X.X.X
 Out - XXX.XXX.X.X
+
+Transfer Rates:
+Inbound - XX.XX KB/s
+Outbound - XX.XX KB/s
 
 Recent Downloads:
 DownloadFileName01.Ext
