@@ -18,7 +18,7 @@ Here is the official Wiseman-Timelord RainMeter skin, it ain't nothing special, 
 - ** Plugin Enhancement **: Use of "PowershellRM" with, Ps1s and Psd1 (=>v1.02), for enhanced powershell support.
 
 ## PREVIEW
-System..
+System Panel..
 ```
     -= System Panel =-
 
@@ -38,7 +38,7 @@ ProcessName04 - XXX.X MB
 ProcessName05 - XXX.X MB
 
 ```
-Network..
+Network Panel..
 ```
     -= Network Panel =-
 
@@ -73,7 +73,8 @@ DownloadFileName05.Ext
 
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes.
-- Out of curiosity, yes it would be possible to use additional plugins for input on panels, then use rainmeter as a gui for llm chatbot interface with multi-panel output.
+- It is possible to use additional plugins for input on panels, then use rainmeter as a gui for powershell projects.
+- 
 
 ## DISCLAIMER
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
