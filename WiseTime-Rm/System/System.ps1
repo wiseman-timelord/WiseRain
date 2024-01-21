@@ -75,7 +75,7 @@ function Update {
 
 
     $output = @(
-        "====== System Panel ======",
+        "====== System Panel =======",
 		"`nProcessor Info:",
         $processorInfo,
         "`nMemory Info:",
