@@ -58,7 +58,7 @@ DownloadFileName05.Ext
 ```
 Bandwidth Panel..
 ```
-==== Monitoring Panel =====
+===== Bandwidth Panel =====
 
 Total Rates:
 Inbound - XX.XX KB/s
