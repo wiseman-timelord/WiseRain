@@ -2,7 +2,6 @@
 
 ### STATUS: DEVELOPMENT
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
-- Separate panel for bandwidth monitoring, hence, when not so interested in bandwidth usage, then able to disable panel that uses psd1, so as, to then not be continually updating a psd1 file.
 - Button on network panel, to enable/disable bandwidth monitoring, ie, "ooo whats using the bandwidth" *click* "oh.." *click*.
 - A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
 - A task list panel with input, self-maintenence/prioritizing.
