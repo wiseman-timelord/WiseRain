@@ -54,10 +54,11 @@ DownloadFileName03.Ext
 DownloadFileName04.Ext
 DownloadFileName05.Ext
  
+ [Enable Monitoring]
 ```
 Bandwidth Panel..
 ```
-===== Bandwidth Panel =====
+==== Monitoring Panel =====
 
 Total Rates:
 Inbound - XX.XX KB/s
