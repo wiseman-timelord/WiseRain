@@ -58,21 +58,11 @@ DownloadFileName05.Ext
 ```
 Bandwidth Panel..
 ```
-===== Bandwidth Panel =====
+==== Monitoring Panel ====
 
 Total Rates:
 Inbound - XX.XX KB/s
 Outbound - XX.XX KB/s
-
-Inbound Rates:
-AppName1 - XX.XX KB/s
-AppName2 - XX.XX KB/s
-AppName3 - XX.XX KB/s
-
-Outbound Rates:
-AppName1 - XX.XX KB/s
-AppName2 - XX.XX KB/s
-AppName3 - XX.XX KB/s
  
 ```
 
