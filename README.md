@@ -34,8 +34,6 @@ Large Processes:
 ProcessName01 - XXX.X MB
 ProcessName02 - XXX.X MB
 ProcessName03 - XXX.X MB
-ProcessName04 - XXX.X MB
-ProcessName05 - XXX.X MB
 
 ```
 Network Panel..
@@ -50,8 +48,6 @@ Recent Downloads:
 DownloadFileName01.Ext
 DownloadFileName02.Ext
 DownloadFileName03.Ext
-DownloadFileName04.Ext
-DownloadFileName05.Ext
 
 ```
 Bandwidth Panel..
