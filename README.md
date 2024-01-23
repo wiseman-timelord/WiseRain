@@ -44,8 +44,8 @@ Network Panel..
 ====== Network Panel =====
 
 Current Connections:
-In - XXX.X.X.X
-Out - XXX.XXX.X.X
+Inbound - XXX.X.X.X
+Outbound - XXX.XXX.X.X
 
 Recent Downloads:
 DownloadFileName01.Ext
