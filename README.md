@@ -45,10 +45,6 @@ Current Connections:
 In - XXX.X.X.X
 Out - XXX.XXX.X.X
 
-Transfer Rates:
-Inbound - XX.XX KB/s
-Outbound - XX.XX KB/s
-
 Recent Downloads:
 DownloadFileName01.Ext
 DownloadFileName02.Ext
@@ -57,6 +53,26 @@ DownloadFileName04.Ext
 DownloadFileName05.Ext
  
 ```
+Bandwidth Panel..
+```
+===== Bandwidth Panel =====
+
+Total Rates:
+Inbound - XX.XX KB/s
+Outbound - XX.XX KB/s
+
+Inbound Rates:
+AppName1 - XX.XX KB/s
+AppName2 - XX.XX KB/s
+AppName3 - XX.XX KB/s
+
+Outbound Rates:
+AppName1 - XX.XX KB/s
+AppName2 - XX.XX KB/s
+AppName3 - XX.XX KB/s
+ 
+```
+
 
 ## USAGE
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
