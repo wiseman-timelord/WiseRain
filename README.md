@@ -54,7 +54,7 @@ DownloadFileName03.Ext
 DownloadFileName04.Ext
 DownloadFileName05.Ext
  
- [Enable Monitoring]
+ [Monitoring On/Off]
 ```
 Bandwidth Panel..
 ```
