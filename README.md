@@ -2,6 +2,7 @@
 
 ### STATUS: DEVELOPMENT
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
+- Optimize & Improve powershell scripts, DONE: "monitor.ps1".
 - A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
 - A task list panel with input, self-maintenence/prioritizing.
 
