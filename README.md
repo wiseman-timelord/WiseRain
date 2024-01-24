@@ -17,6 +17,7 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 - ** Multi-Panel **: Currently has 2 panels, System and Network.
 - ** Plugin Enhancement **: Use of "PowershellRM" with, Ps1s and Psd1 (=>v1.02), for enhanced powershell support.
 - ** Compatibility **: Supports, IPv4 and truncated IPv6, display of IP address on network panel.
+- ** Real-World Units **: Monitoring is in KB/s not Kb/s.
 
 ## PREVIEW
 System Panel  (10 seconds refresh)..
