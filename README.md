@@ -2,7 +2,7 @@
 
 ### STATUS: DEVELOPMENT
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
-- Button on network panel, to enable/disable bandwidth monitoring, ie, "ooo whats using the bandwidth" *click* "oh.." *click*. Attempt 1 fail, possibly needs, separate folder or different syntax or sensible name, try with current setup.
+- Button on network panel, to enable/disable bandwidth monitoring, ie, "ooo whats using the bandwidth" *click* "oh.." *click*. Attempt 1 fail, possibly needs, separate folder or different syntax or sensible name, try with current setup. so as to not be continually writing to a psd1.
 - Use, cmdlets and/or .net, to add "AppName1/2/3 - 0.00 KB/s" top bandwidth use. 
 - A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
 - A task list panel with input, self-maintenence/prioritizing.
