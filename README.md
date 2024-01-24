@@ -2,8 +2,6 @@
 
 ### STATUS: DEVELOPMENT
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
-- Button on network panel, to enable/disable bandwidth monitoring, ie, "ooo whats using the bandwidth" *click* "oh.." *click*. Attempt 1 fail, possibly needs, separate folder or different syntax or sensible name, try with current setup. so as to not be continually writing to a psd1.
-- Use, cmdlets and/or .net, to add "AppName1/2/3 - 0.00 KB/s" top bandwidth use. 
 - A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
 - A task list panel with input, self-maintenence/prioritizing.
 
@@ -20,7 +18,7 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 - ** Plugin Enhancement **: Use of "PowershellRM" with, Ps1s and Psd1 (=>v1.02), for enhanced powershell support.
 
 ## PREVIEW
-System Panel..
+System Panel  (10 seconds refresh)..
 ```
 ====== System Panel ======
 Processor Info:
@@ -37,7 +35,7 @@ ProcessName02 - XXX.X MB
 ProcessName03 - XXX.X MB
 
 ```
-Network Panel..
+Network Panel (10 seconds refresh)..
 ```
 ====== Network Panel =====
 
@@ -51,7 +49,7 @@ DownloadFileName02.Ext
 DownloadFileName03.Ext
 
 ```
-Bandwidth Panel..
+Monitor Panel (5 seconds refresh)..
 ```
 ==== Monitoring Panel ====
 
@@ -60,7 +58,6 @@ Inbound - XX.XX KB/s
 Outbound - XX.XX KB/s
  
 ```
-
 
 ## USAGE
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
@@ -77,6 +74,10 @@ Outbound - XX.XX KB/s
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes.
 - It is possible to use additional plugins for input on panels, then use rainmeter as a gui for powershell projects.
+
+### CANCELLATIONS
+- Button to enable/disable monitoring, it would require its own panel just to have a button in order for higher refresh, obviously its better to right-click enable/disable monitor.ini.
+- Top 3 bandwidh using apps, this required special libraries to achieve, at least it was not possible through, cmdlets and .net 4.0.
 
 ## DISCLAIMER
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
