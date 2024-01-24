@@ -41,8 +41,8 @@ Network Panel (10 seconds refresh)..
 ====== Network Panel =====
 
 Current Connections:
-Inbound - XXX.X.X.X
-Outbound - XXX.XXX.X.X
+IP In - XXX.X.X.X
+IP Out - XXX.XXX.X.X
 
 Recent Downloads:
 DownloadFileName01.Ext
