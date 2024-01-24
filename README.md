@@ -4,6 +4,7 @@
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
 - Optimize & Improve powershell scripts, DONE: "monitor.ps1", "network.ps1".
 - A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
+- Some kind of notation, todays plan kind of thing, short note of for example 5 main tasks of the day.
 - A task list panel with input, self-maintenence/prioritizing.
 
 ## DESCRIPTION
