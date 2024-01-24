@@ -77,7 +77,6 @@ Outbound - XX.XX KB/s
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes.
 - It is possible to use additional plugins for input on panels, then use rainmeter as a gui for powershell projects.
-- The scripts assume "IPv4", if you 
 
 ### CANCELLATIONS
 - Button to enable/disable monitoring, it would require its own panel just to have a button in order for higher refresh, obviously its better to right-click enable/disable monitor.ini. Will re-asses this if there are other new panels added.
