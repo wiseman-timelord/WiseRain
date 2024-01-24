@@ -80,7 +80,7 @@ Outbound - XX.XX KB/s
 - The scripts assume "IPv4", if you 
 
 ### CANCELLATIONS
-- Button to enable/disable monitoring, it would require its own panel just to have a button in order for higher refresh, obviously its better to right-click enable/disable monitor.ini.
+- Button to enable/disable monitoring, it would require its own panel just to have a button in order for higher refresh, obviously its better to right-click enable/disable monitor.ini. Will re-asses this if there are other new panels added.
 - Top 3 bandwidh using apps, this required special libraries to achieve, at least it was not possible through, cmdlets and .net 4.0.
 
 ## DISCLAIMER
