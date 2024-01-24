@@ -1,10 +1,8 @@
-# Script: System.ps1
+# Script: system.ps1
 
 # Global Variables
 $global:TempOsDriveLetter = "R" # Temp Drive Letter
 $global:TempOsDriveName = "RamDriveOs" # Temp Drive Name
-$global:TempSlDriveLetter = "S" # Temp Drive Letter
-$global:TempSlDriveName = "RamDriveSl" # Temp Drive Name
 
 # Function to get processor information
 function Get-ProcessorInfo {
@@ -42,15 +40,6 @@ function Get-TempOsDiskInfo {
     return "$global:TempOsDriveName - $used GB / $total GB"
 }
 
-# Function Get Ramdiskinfo for TempSl
-function Get-TempSlDiskInfo {
-    $SlRamDisk = Get-PSDrive $global:TempSlDriveLetter | Select-Object Used, Free
-    $used = [math]::Round($SlRamDisk.Used / 1GB, 1)
-    $free = [math]::Round($SlRamDisk.Free / 1GB, 1)
-    $total = $used + $free
-    return "$global:TempSlDriveName - $used GB / $total GB"
-}
-
 # Function Get Processinfo
 function Get-ProcessInfo {
     $processes = Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 3
@@ -70,7 +59,6 @@ function Update {
     $processorInfo = Get-ProcessorInfo
     $memoryInfo = Get-MemoryInfo
     $tempOsDiskInfo = Get-TempOsDiskInfo
-    $tempSlDiskInfo = Get-TempSlDiskInfo
     $processInfo = Get-ProcessInfo -join "`n"
 
 
@@ -81,7 +69,6 @@ function Update {
         "`nMemory Info:",
         $memoryInfo,
         $tempOsDiskInfo,
-        $tempSlDiskInfo,
         "`nLarge Processes:",
         $processInfo
     ) -join "`n"

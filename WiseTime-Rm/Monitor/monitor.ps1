@@ -1,3 +1,5 @@
+# Script: monitor.ps1
+
 # Variables
 $dataFilePath = ".\data.Psd1" # Path to the data file
 
@@ -10,8 +12,8 @@ function Get-NetworkStatistics {
     $currentInbound = $networkInterface.ReceivedBytes
     $currentOutbound = $networkInterface.SentBytes
 
-    # Calculate the difference in KB (Kilobytes)
-    $inRate = ($currentInbound - $data.LastInbound) / 1KB / 5  # Assuming the script runs every 5 seconds
+    # Calculate difference, last character is timer
+    $inRate = ($currentInbound - $data.LastInbound) / 1KB / 5
     $outRate = ($currentOutbound - $data.LastOutbound) / 1KB / 5
 
     # Update the data file with current statistics
@@ -26,13 +28,10 @@ function Get-NetworkStatistics {
     Set-Content -Path $dataFilePath -Value $dataContent
 
     return @{
-        InRate = [math]::Round($inRate, 2)
-        OutRate = [math]::Round($outRate, 2)
+        InRate = [math]::Round($inRate, 1)
+        OutRate = [math]::Round($outRate, 1)
     }
 }
-
-# Collecting output from each function
-$networkStats = Get-NetworkStatistics
 
 # Function Update: Constructing the final output
 function Update {

@@ -1,3 +1,5 @@
+# Script: network.ps1
+
 # Variables
 $global:DownloadsFolderPath = "E:\Downloads" # Downloads Folder Path
 
@@ -54,6 +56,8 @@ function Get-DownloadsInfo {
 function Update {
     $connectionInfo = Get-ConnectionInfo
     $downloadsInfo = Get-DownloadsInfo
+
+    $monitoringAction = '[!ToggleConfig "Rainmeter\Monitor" "monitor.ini"]'
 
     $output = @(
         "====== Network Panel ======",
