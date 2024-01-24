@@ -29,7 +29,7 @@ function Get-ConnectionInfo {
         }
 
         # Determine the direction of the connection
-        $direction = if ($ip -eq "127.0.0.1" -or $ip -eq "::1") { "Inbound" } else { "Outbound" }
+        $direction = if ($ip -eq "127.0.0.1" -or $ip -eq "::1") { "IP In " } else { "IP Out" }
         $connectionString = "$direction - $ip"
 
         # Truncate to 24 characters
