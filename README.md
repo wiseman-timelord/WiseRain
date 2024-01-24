@@ -1,11 +1,9 @@
 # WiseTime-Rm
 
 ### STATUS: DEVELOPMENT
-This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
-- Optimize & Improve powershell scripts, DONE: "monitor.ps1", "network.ps1".
-- A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
-- Some kind of notation, todays plan kind of thing, short note of for example 5 main tasks of the day.
-- A task list panel with input, self-maintenence/prioritizing.
+It works well, and has been, tested, optimized and improved. It does what is possible through, =< .net 4.0 and Powershell Cmdlets, I could create additional modules for..
+- Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
+- A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight) must be completed.
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
