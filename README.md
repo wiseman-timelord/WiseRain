@@ -29,7 +29,7 @@ CXX/TXX - X% - XXXXMHz
 
 Temporary Spaces:
 Memory - XX.XGB/XX.XGB
-RamDrive1 - XX.XGB/XX.XGB
+RamDrive - XX.XGB/XX.XGB
 
 Large Processes:
 ProcessName01 - XXX.X MB
