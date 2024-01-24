@@ -6,19 +6,15 @@ $global:TempOsDriveName = "RamDriveOs" # Temp Drive Name
 
 # Function to get processor information
 function Get-ProcessorInfo {
-    # Getting CPU load and speed
-    $cpuLoad = Get-WmiObject Win32_Processor | Measure-Object -Property LoadPercentage -Average
-    $cpuSpeed = Get-WmiObject Win32_Processor | Select-Object -ExpandProperty CurrentClockSpeed
-
-    # Getting number of cores and threads
-    $cores = (Get-WmiObject Win32_Processor | Measure-Object -Property NumberOfCores -Sum).Sum
-    $threads = (Get-WmiObject Win32_Processor | Measure-Object -Property NumberOfLogicalProcessors -Sum).Sum
-
-    # Format the output
+    $processor = Get-CimInstance Win32_Processor
+    $cpuLoad = ($processor | Measure-Object -Property LoadPercentage -Average).Average
+    $cpuSpeed = $processor.CurrentClockSpeed
+    $cores = ($processor | Measure-Object -Property NumberOfCores -Sum).Sum
+    $threads = ($processor | Measure-Object -Property NumberOfLogicalProcessors -Sum).Sum
     if ($cores -and $threads) {
-        return "C$cores/T$threads - $($cpuLoad.Average)% - ${cpuSpeed}MHz"
+        return "C$cores/T$threads - $cpuLoad% - ${cpuSpeed}MHz"
     } elseif ($threads) {
-        return "T$threads - $($cpuLoad.Average)% - ${cpuSpeed}MHz"
+        return "T$threads - $cpuLoad% - ${cpuSpeed}MHz"
     }
 }
 
@@ -31,7 +27,7 @@ function Get-MemoryInfo {
     return "Memory - $usedMemory GB / $totalMemory GB"
 }
 
-# Function Get Ramdiskinfo for TempOs
+# Get info for TempDrive
 function Get-TempOsDiskInfo {
     $OsRamDisk = Get-PSDrive $global:TempOsDriveLetter | Select-Object Used, Free
     $used = [math]::Round($OsRamDisk.Used / 1GB, 1)
@@ -54,14 +50,12 @@ function Get-ProcessInfo {
     return $processInfo -join "`n"
 }
 
-# Constructing the final output with explicit new line separation
+# update panel display
 function Update {
     $processorInfo = Get-ProcessorInfo
     $memoryInfo = Get-MemoryInfo
     $tempOsDiskInfo = Get-TempOsDiskInfo
     $processInfo = Get-ProcessInfo -join "`n"
-
-
     $output = @(
         "====== System Panel =======",
 		"`nProcessor Info:",
@@ -72,10 +66,8 @@ function Update {
         "`nLarge Processes:",
         $processInfo
     ) -join "`n"
-
-    # Output the final result
     $output
 }
 
-# Output the final result
+# Output final result
 Update
