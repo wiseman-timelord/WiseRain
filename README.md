@@ -1,7 +1,7 @@
 # WiseTime-Rm
 
 ### STATUS: WORKING
-It works well, and has been, tested, optimized and improved. It does what is, useful and possible, through Powershell Cmdlet.
+It works well, and has been, tested, optimized and improved. It does what is, useful and possible, through Powershell Cmdlets.
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
