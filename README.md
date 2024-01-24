@@ -8,9 +8,8 @@ This is a work in progress, progress will be slow, occasionally it will be impro
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
-- Version 1.00 is a good lightweight base with a timer of 5000, though I advise changing this to 10000.
-- Version => 1.05, has a few more, features and improvements, with a timer of 15000, and uses a Psd1 file requiring saving each iteration of a <1kb temp file.
-- The distinction between Versions 1.05a/b is related to the theme of panel titles, either it is, in the middle "-= TITLE =-" or across the whole thing "=== TITLE ===".
+- Version 1.00 is a good lightweight base with a timer of 5000, for people wishing to develop their own powershell based scripts.
+- Version => 1.05, has a few more, features and improvements, and uses a Psd1 file requiring saving each iteration of a <1kb temp file.
 
 ### FEATURES
 - ** Dark Theme **: Designed for dark-themed desktops, where the background is dark-grey and the text is light-grey or white.
@@ -66,6 +65,7 @@ Outbound - XX.XX KB/s
 3. Copy the `WiseTime-Rm` folder into your `RainMeter\Skins` folder.
 4. Edit the global variables at the top of, ".\system\System.ps1" and ".\network\Netork.ps1", to point to the appropriate locations.
 5. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 2 panels from `WiseTime-Rm` named, `system.ini` and `network.ini`, as you normally would the panels of other skins.   
+- When updating I suggest deleting the old "WiseTime-RM" folder and replacing with the new, as, files and filenames, differ, and yes this will require editing the variables again.
 
 ### REQUIREMENTS
 1. [RainMeter](https://www.rainmeter.net/) (to load the skin).
