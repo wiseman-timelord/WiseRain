@@ -65,8 +65,7 @@ Outbound - XX.XX KB/s
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
 2. Download `Wiseman-Timelords Rainmeter Skin`, and then unpack it to a suitable location.
 3. Copy the `WiseTime-Rm` folder into your `RainMeter\Skins` folder.
-4. Edit the global variables at the top of, ".\system\System.ps1" and ".\network\Netork.ps1", to point to the appropriate locations. 
-- If you do not use a Ramdrive, then rename the label at the bottom to TempDrive, and set the variable at the top to the location of your drive set for temporary files, in failing to have a temp drive, then point it to the system drive and change the label relevantly; it should not be left to a dead location, for good practice.
+4. Edit the global variables at the top of, ".\system\System.ps1" and ".\network\Netork.ps1", to point to the appropriate locations. If you do not use a Ramdrive, then set the, drive letter and rename the label, to TempDrive D??, failing that, then the SystemDrive C; it should not be left to a dead location, for good practice.
 5. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 2 panels from `WiseTime-Rm` named, `system.ini` and `network.ini`, as you normally would the panels of other skins.   
 
 ### UPDATING
