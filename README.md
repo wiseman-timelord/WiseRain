@@ -2,13 +2,13 @@
 
 ### STATUS: DEVELOPMENT
 This is a work in progress, progress will be slow, occasionally it will be improved, probably a little between projects.
-- Optimize & Improve powershell scripts, DONE: "monitor.ps1".
+- Optimize & Improve powershell scripts, DONE: "monitor.ps1", "network.ps1".
 - A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box.
 - A task list panel with input, self-maintenence/prioritizing.
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
-- Version 1.00 is a good lightweight base with a timer of 5000, for people wishing to develop their own powershell based scripts.
+- Version 1.00 is a good lightweight base, for people wishing to develop their own powershell based scripts.
 - Version => 1.05, has a few more, features and improvements, and uses a Psd1 file requiring saving each iteration of a <1kb temp file.
 
 ### FEATURES
@@ -16,6 +16,7 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 - ** User Friendly **: Use of powershell scripts with clearly commented global variables at the top, for customized readings.
 - ** Multi-Panel **: Currently has 2 panels, System and Network.
 - ** Plugin Enhancement **: Use of "PowershellRM" with, Ps1s and Psd1 (=>v1.02), for enhanced powershell support.
+- ** Compatibility **: Supports, IPv4 and IPv6, display of IP address on network panel.
 
 ## PREVIEW
 System Panel  (10 seconds refresh)..
@@ -75,6 +76,7 @@ Outbound - XX.XX KB/s
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes.
 - It is possible to use additional plugins for input on panels, then use rainmeter as a gui for powershell projects.
+- The scripts assume "IPv4", if you 
 
 ### CANCELLATIONS
 - Button to enable/disable monitoring, it would require its own panel just to have a button in order for higher refresh, obviously its better to right-click enable/disable monitor.ini.
