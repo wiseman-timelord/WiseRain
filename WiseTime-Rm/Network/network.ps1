@@ -23,15 +23,26 @@ function Get-ConnectionInfo {
         $ipPort = $parts[2] -split ':'
         $ip = $ipPort[0]
 
+        # Adjust for IPv6 addresses
+        if ($ip -like "*:*") {
+            $ip = $ipPort[0..($ipPort.Length - 2)] -join ":"
+        }
+
         # Determine the direction of the connection
-        $direction = if ($ip -eq "127.0.0.1" -or $ip -eq "::1") { "Inbound " } else { "Outbound" }
+        $direction = if ($ip -eq "127.0.0.1" -or $ip -eq "::1") { "Inbound" } else { "Outbound" }
+        $connectionString = "$direction - $ip"
+
+        # Truncate to 24 characters
+        if ($connectionString.Length -gt 24) {
+            $connectionString = $connectionString.Substring(0, 24)
+        }
 
         # Generate a unique key for each direction and IP
         $connectionKey = "$direction,$ip"
 
         # Record each unique connection direction and IP
         if (-not $connections.ContainsKey($connectionKey)) {
-            $connections[$connectionKey] = "$direction - $ip"
+            $connections[$connectionKey] = $connectionString
         }
     }
 
@@ -56,8 +67,6 @@ function Get-DownloadsInfo {
 function Update {
     $connectionInfo = Get-ConnectionInfo
     $downloadsInfo = Get-DownloadsInfo
-
-    $monitoringAction = '[!ToggleConfig "Rainmeter\Monitor" "monitor.ini"]'
 
     $output = @(
         "====== Network Panel ======",
