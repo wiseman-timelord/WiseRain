@@ -1,9 +1,7 @@
 # WiseTime-Rm
 
 ### STATUS: WORKING
-It works well, and has been, tested, optimized and improved. It does what is possible through Powershell Cmdlets, I could create additional modules for..
-- Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
-- A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight) must be completed.
+It works well, and has been, tested, optimized and improved. It does what is, useful and possible, through Powershell Cmdlet.
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
@@ -77,6 +75,11 @@ Outbound - XX.XX KB/s
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes.
 - It is possible to use additional plugins for input on panels, then use rainmeter as a gui for powershell projects.
+
+### DEVELOPMENT
+I could create additional modules for..
+- Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
+- A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight must be completed first).
 
 ### CANCELLATIONS
 - Button to enable/disable monitoring, it would require its own panel just to have a button in order for higher refresh, obviously its better to right-click enable/disable monitor.ini. Will re-asses this if there are other new panels added.
