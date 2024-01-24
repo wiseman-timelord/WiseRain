@@ -1,7 +1,7 @@
 # WiseTime-Rm
 
 ### STATUS: DEVELOPMENT
-It works well, and has been, tested, optimized and improved. It does what is possible through, =< .net 4.0 and Powershell Cmdlets, I could create additional modules for..
+It works well, and has been, tested, optimized and improved. It does what is possible through Powershell Cmdlets, I could create additional modules for..
 - Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
 - A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight) must be completed.
 
