@@ -1,8 +1,10 @@
 # WiseRain
 
 ### STATUS: WORKING
-It works well, and has been, tested, optimized and improved. It does what is, useful and possible, through Powershell Cmdlets.
-
+It worked well, but after 2 weeks for some reason there are issues with the bandwidth monitoring panel; its causing hard crash, and psd1 is corrupt. Advise leaving that part off for now if you have similar issues, and as such requires investigation into monitor.ps1, and produce updates/upgrades...
+- check for corrupts psd1, and replace with prefab from ps1.
+- possibly use my new, psd1 functions from [ImpExpPsd1](https://github.com/wiseman-timelord/ImpExpPsd1).
+  
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
 - Version 1.00 is a good lightweight base, for people wishing to develop their own powershell based scriptsm, additionally newer versions have less comments/blank lines.
