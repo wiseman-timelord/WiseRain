@@ -2,7 +2,8 @@
 
 ### STATUS: WORKING
 It worked well, but after 2 weeks for some reason there are issues with the bandwidth monitoring panel; its causing hard crash, and psd1 is corrupt. Advise leaving that part off for now if you have similar issues, and as such requires investigation into monitor.ps1, and produce updates/upgrades...
-- check for corrupts psd1, and replace with prefab from ps1.
+- possibly check for corrupts psd1, and replace with prefab from ps1 (this will add weight).
+- possibly make delay to 10 seconds.
 - possibly use my new, psd1 functions from [ImpExpPsd1](https://github.com/wiseman-timelord/ImpExpPsd1).
   
 ## DESCRIPTION
