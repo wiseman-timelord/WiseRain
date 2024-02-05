@@ -5,7 +5,8 @@ It worked well, but after 2 weeks for some reason there are issues with the band
 - possibly check for corrupts psd1, and replace with prefab from ps1 (this will add weight).
 - possibly make delay to 10 seconds.
 - possibly use my new, psd1 functions from [ImpExpPsd1](https://github.com/wiseman-timelord/ImpExpPsd1).
-  
+- ensure all variables are unique (movie maker from live essentials could be interfering).
+
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
 - Version 1.00 is a good lightweight base, for people wishing to develop their own powershell based scriptsm, additionally newer versions have less comments/blank lines.
