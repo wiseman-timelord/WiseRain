@@ -66,8 +66,8 @@ function Update {
         $output = @(
             "===== Monitoring Panel =====",
             "`nTransfer Rates:",
-            "Total Inbound - $($networkStats.InRate) KB/s",
-            "Total Outbound - $($networkStats.OutRate) KB/s"
+            "Download - $($networkStats.InRate) KB/s",
+            "Upload - $($networkStats.OutRate) KB/s"
         ) -join "`n"
         return $output
     } else {
