@@ -2,7 +2,7 @@
 
 # Global Variables
 $global:TempOsDriveLetter = "R" # Temp Drive Letter
-$global:TempOsDriveName = "RamDriveOs" # Temp Drive Name
+$global:TempOsDriveName = "RamDrive" # Temp Drive Name
 
 # Function to get processor information
 function Get-ProcessorInfo {
