@@ -1,8 +1,16 @@
 # WiseRain
 
 ### STATUS
-Beta. After leaving the given panels on for hours there will likely be a hard-crash; I have already attempted to fix this. Its presumed, Rainmeter and/or PowershellRM and/or some Powershell Cmdlets used, are not designed to be spammed with stop/start commands, it happens a lot less with the bandwidth monitor panel disabled. I have ensured the variables are all unique, and am testing.
-- Add new stealthed script producing ongoing operation to fetch all values from all the cmdlets, other scripts will check for this, and if its not running, then run it; the same signal should reset a countdown untill the process stops running, for example 60 seconds to self termination; thus solving spamming cmdlets with stop/start. each request from the 3 scripts should result with the most recent stats from the stealth script's psd1 being sent back to the relevant 1 of the 3 scripts by the stealth script, this way, the cmdlets can be kept active and the psd1 can be safely written to/read from, and the process will not remain running while not in use.
+Beta. After leaving the given panels on for hours there will likely be a hard-crash; I have already attempted to fix this. Its presumed...
+1. Rainmeter and/or PowershellRM and/or some Powershell Cmdlets used, are not designed to be spammed with stop/start commands, it happens a lot less with the bandwidth monitor panel disabled.
+2. Variables causing issues with other processes;I have ensured the variables are all unique, and am testing.
+
+## Development
+- Here are some possible directions for development...
+1. Add new stealthed script producing ongoing operation to fetch all values from all the cmdlets, other scripts will check for this, and if its not running, then run it; the same signal should reset a countdown untill the process stops running, for example 60 seconds to self termination; thus solving spamming cmdlets with stop/start. each request from the 3 scripts should result with the most recent stats from the stealth script's psd1 being sent back to the relevant 1 of the 3 scripts by the stealth script, this way, the cmdlets can be kept active and the psd1 can be safely written to/read from, and the process will not remain running while not in use.
+I could create additional modules for..
+2. Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
+3. A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight must be completed first).
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
@@ -77,11 +85,6 @@ Outbound - XX.XX KB/s
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes.
 - It is possible to use additional plugins for input on panels, then use rainmeter as a gui for powershell projects.
-
-### DEVELOPMENT
-I could create additional modules for..
-- Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
-- A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight must be completed first).
 
 ### CANCELLATIONS
 - Button to enable/disable monitoring, it would require its own panel just to have a button in order for higher refresh, obviously its better to right-click enable/disable monitor.ini. Will re-asses this if there are other new panels added.
