@@ -3,7 +3,7 @@
 ### Status : Beta
 After leaving the given panels on for hours it was causing a hard-crash, it happened a lot less with the bandwidth monitor panel disabled, but still happened; I am currently testing some updates, they are present in v1.10...
 - Have made timers odd numbers, Monitor=5s, System=9s and Network=13s, for less clashing.
-- Have ensured the variables are all unique with min 8 characters plus a 3 letter/number hash at end. 
+- Have ensured the variables are unique with min 8 characters plus a 3 letter/number hash at end. 
 
 ## Development
 Here are some possible directions for development...
