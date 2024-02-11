@@ -1,8 +1,7 @@
 # WiseRain
 
 ### STATUS
-Beta. After leaving the given panels on for hours there will likely be a hard-crash; I have already attempted to fix this. Its presumed, Rainmeter and/or PowershellRM and/or some Powershell Cmdlets used, are not designed to be spammed with stop/start commands, it happens a lot less with the bandwidth monitor panel disabled. I have ensured most variables are unique, and am testing.
-- Make remainder of values unique.
+Beta. After leaving the given panels on for hours there will likely be a hard-crash; I have already attempted to fix this. Its presumed, Rainmeter and/or PowershellRM and/or some Powershell Cmdlets used, are not designed to be spammed with stop/start commands, it happens a lot less with the bandwidth monitor panel disabled. I have ensured the variables are all unique, and am testing.
 - Add new stealthed script producing ongoing operation to fetch all values from all the cmdlets, other scripts will check for this, and if its not running, then run it; the same signal should reset a countdown untill the process stops running, for example 60 seconds to self termination; thus solving spamming cmdlets with stop/start. each request from the 3 scripts should either result with the most recent stats from the stealth script's psd1 being, sent back to the relevant 1 of the 3 scripts by the stealth script this way the cmdlets can be kept active, while the psd1 can be safely written to and read from.
 
 ## DESCRIPTION
