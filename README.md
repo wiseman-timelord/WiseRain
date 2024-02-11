@@ -2,8 +2,8 @@
 
 ### Status : Beta
 After leaving the given panels on for hours there will likely be a hard-crash, it happens a lot less with the bandwidth monitor panel disabled but still happens; I am currently testing some updates, they have been updated but no release yet...
-- Rainmeter and/or PowershellRM and/or some Powershell Cmdlets used, are not designed to be spammed with stop/start commands. Solution - have made timers, 5000, 9000 and 13000.
-- Variables causing issues with other processes. Solution - have ensured the variables are all unique. 
+- Rainmeter and/or PowershellRM and/or some Powershell Cmdlets used, are not designed to be spammed with stop/start commands. Solution - have made timers odd numbers, 5000, 9000 and 13000, there will be less clashing.
+- Variables causing issues with other processes. Solution - have ensured the variables are all unique with a 3 letter/number hash at end. 
 
 ## Development
 Here are some possible directions for development...
