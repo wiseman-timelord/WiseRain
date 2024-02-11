@@ -1,66 +1,64 @@
-# Script: network.ps1
+# Global Variables
+$Global:DownloadsFolderPath_3d9K = "E:\Downloads" # Downloads Folder Path
 
-# Variables
-$global:DownloadsFolderPath = "E:\Downloads" # Downloads Folder Path
-
-# Function Get Connectioninfo
+# Function Get Connection Info
 function Get-ConnectionInfo {
     try {
-        $netstatOutput = netstat -ano | Where-Object { $_ -like "*ESTABLISHED*" }
-        if (-not $netstatOutput) {
+        $NetstatOutput_5x8L = netstat -ano | Where-Object { $_ -like "*ESTABLISHED*" }
+        if (-not $NetstatOutput_5x8L) {
             throw "No netstat output"
         }
     } catch {
         Write-Host "Error fetching netstat data: $_"
         return "Unavailable Or Disconnected"
     }
-    $connections = @{}
-    foreach ($line in $netstatOutput) {
-        $parts = $line -split '\s+'
-        $ipPort = $parts[2] -split ':'
-        $ip = $ipPort[0]
-        if ($ip -like "*:*") {
-            $ip = $ipPort[0..($ipPort.Length - 2)] -join ":"
+    $ConnectionsHash_8y4P = @{}
+    foreach ($Line in $NetstatOutput_5x8L) {
+        $Parts = $Line -split '\s+'
+        $IpPort = $Parts[2] -split ':'
+        $Ip = $IpPort[0]
+        if ($Ip -like "*:*") {
+            $Ip = $IpPort[0..($IpPort.Length - 2)] -join ":"
         }
-        $direction = if ($ip -eq "127.0.0.1" -or $ip -eq "::1") { "IP In " } else { "IP Out" }
-        $connectionString = "$direction - $ip"
-        if ($connectionString.Length -gt 24) {
-            $connectionString = $connectionString.Substring(0, 24)
+        $Direction = if ($Ip -eq "127.0.0.1" -or $Ip -eq "::1") { "IP In " } else { "IP Out" }
+        $ConnectionString = "$Direction - $Ip"
+        if ($ConnectionString.Length -gt 24) {
+            $ConnectionString = $ConnectionString.Substring(0, 24)
         }
-        $connectionKey = "$direction,$ip"
-        if (-not $connections.ContainsKey($connectionKey)) {
-            $connections[$connectionKey] = $connectionString
+        $ConnectionKey = "$Direction,$Ip"
+        if (-not $ConnectionsHash_8y4P.ContainsKey($ConnectionKey)) {
+            $ConnectionsHash_8y4P[$ConnectionKey] = $ConnectionString
         }
     }
-    return $connections.Values -join "`n"
+    return $ConnectionsHash_8y4P.Values -join "`n"
 }
 
-# Function Get Downloadsinfo
+# Function Get Downloads Info
 function Get-DownloadsInfo {
-    $downloads = Get-ChildItem $global:DownloadsFolderPath | Sort-Object LastWriteTime -Descending | Select-Object -First 3
-    $downloadInfo = $downloads | ForEach-Object {
-        $fileName = $_.BaseName
-        if ($fileName.Length -gt 24) {
-            $fileName = $fileName.Substring(0, 24) + "..."
+    $DownloadsList_7t5Q = Get-ChildItem $Global:DownloadsFolderPath_3d9K | Sort-Object LastWriteTime -Descending | Select-Object -First 3
+    $DownloadInfo_2a4R = $DownloadsList_7t5Q | ForEach-Object {
+        $FileName = $_.BaseName
+        if ($FileName.Length -gt 24) {
+            $FileName = $FileName.Substring(0, 24) + "..."
         }
-        $fileName
+        $FileName
     }
-    return $downloadInfo -join "`n"
+    return $DownloadInfo_2a4R -join "`n"
 }
 
 # Function Update: Constructing the final output
 function Update {
-    $connectionInfo = Get-ConnectionInfo
-    $downloadsInfo = Get-DownloadsInfo
-    $output = @(
+    $ConnectionInfo = Get-ConnectionInfo
+    $DownloadsInfo = Get-DownloadsInfo
+    $Output = @(
         "====== Network Panel ======",
         "`nCurrent Connections:",
-        $connectionInfo,
+        $ConnectionInfo,
         "`nRecent Downloads:",
-        $downloadsInfo
+        $DownloadsInfo
     ) -join "`n"
 
-    $output
+    return $Output
 }
 
 # Output the final result
