@@ -2,9 +2,7 @@
 
 ### STATUS
 Working. Possible improvements are...
-- use my new, psd1 functions from [ImpExpPsd1](https://github.com/wiseman-timelord/ImpExpPsd1).
 - ensure all variables are unique (movie maker from live essentials could be interfering).
-
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
