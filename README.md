@@ -20,7 +20,7 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 - ** Real-World Units **: Monitoring is in KB/s not Kb/s.
 
 ## PREVIEW
-System Panel  (10 seconds refresh)..
+System Panel  (9 seconds refresh)..
 ```
 ====== System Panel ======
 Processor Info:
@@ -36,7 +36,7 @@ ProcessName02 - XXX.X MB
 ProcessName03 - XXX.X MB
 
 ```
-Network Panel (10 seconds refresh)..
+Network Panel (13 seconds refresh)..
 ```
 ====== Network Panel =====
 
