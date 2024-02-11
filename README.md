@@ -77,7 +77,7 @@ Outbound - XX.XX KB/s
 
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes, unless you have some kind of additional script running.
-- The three timers, with intervals of 5 seconds, 9 seconds, and 13 seconds, would synchronize every 585 seconds, and with intervals of 7 seconds, 11 seconds, and 15 seconds every 1,155 seconds.  
+- The three timers, with intervals of 5 seconds, 9 seconds, and 13 seconds, would synchronize every 585 seconds, and with intervals of 7 seconds, 11 seconds, and 15 seconds, then every 1,155 seconds.  
 - It is possible to use additional plugins for input on panels.
 - It is possible to use rainmeter as a gui for powershell projects.
 
