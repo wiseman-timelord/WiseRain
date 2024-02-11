@@ -1,7 +1,7 @@
 # WiseRain
 
 ### STATUS
-Beta. After hours of leaving the "Monitor" panel on, there will likely be a hard-crash; I have already attempted to fix this. The Possible improvements are...
+Beta. After hours of leaving the given panels on, there will likely be a hard-crash; I have already attempted to fix this. Its presumed, Rainmeter and/or the plugin PowershellRM and/or some of the Powershell Cmdlets themselves, are not intended to be spammed with stop/start commands...
 - ensure all variables are unique (movie maker from live essentials could be interfering).
 
 ## DESCRIPTION
