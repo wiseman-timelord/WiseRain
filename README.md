@@ -1,7 +1,7 @@
 # WiseRain
 
 ### STATUS
-Beta. After hours of leaving the given panels on, there will likely be a hard-crash; I have already attempted to fix this. Its presumed, Rainmeter and/or the plugin PowershellRM and/or some of the Powershell Cmdlets themselves, are not designed to be spammed with stop/start commands, it happens a lot less with the bandwidth monitor panel disabpled.
+Beta. After leaving the given panels on for hours there will likely be a hard-crash; I have already attempted to fix this. Its presumed, Rainmeter and/or PowershellRM and/or some Powershell Cmdlets used, are not designed to be spammed with stop/start commands, it happens a lot less with the bandwidth monitor panel disabled.
 - ensure all variables are unique (movie maker from live essentials could be interfering).
 
 ## DESCRIPTION
