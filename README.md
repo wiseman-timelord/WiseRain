@@ -1,7 +1,7 @@
 # WiseRain
 
 ### Status : Beta
-After leaving the given panels on for hours there will likely be a hard-crash, it happens a lot less with the bandwidth monitor panel disabled but still happens; I have already attempted to fix this. Its presumed...
+After leaving the given panels on for hours there will likely be a hard-crash, it happens a lot less with the bandwidth monitor panel disabled but still happens; Its presumed...
 - Rainmeter and/or PowershellRM and/or some Powershell Cmdlets used, are not designed to be spammed with stop/start commands, .
 - Variables causing issues with other processes;I have ensured the variables are all unique, and am testing.
 
