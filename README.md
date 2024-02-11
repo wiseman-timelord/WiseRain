@@ -26,7 +26,7 @@ System Panel  (9 seconds refresh)..
 Processor Info:
 CXX/TXX - X% - XXXXMHz
 
-Temporary Spaces:
+Memory Info:
 Memory - XX.XGB/XX.XGB
 RamDrive - XX.XGB/XX.XGB
 
@@ -55,8 +55,8 @@ Monitor Panel (5 seconds refresh)..
 ==== Monitoring Panel ====
 
 Total Rates:
-Inbound - XX.XX KB/s
-Outbound - XX.XX KB/s
+Download - XX.XX KB/s
+Upload - XX.XX KB/s
  
 ```
 
