@@ -18,8 +18,10 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 System Panel  (9 seconds refresh)..
 ```
 ====== System Panel ======
+
 Processor Info:
-CXX/TXX - X% - XXXXMHz
+Cores XX, Threads XX
+Usage - X% - Frq. XXXXMHz
 
 Memory Info:
 Memory - XX.XGB/XX.XGB
@@ -35,6 +37,10 @@ Network Panel (13 seconds refresh)..
 ```
 ====== Network Panel =====
 
+Total Rates:
+Dnload - XX.XX KB/s
+Upload - XX.XX KB/s
+
 Current Connections:
 IP In - XXX.X.X.X
 IP Out - XXX.XXX.X.X
@@ -44,15 +50,6 @@ DownloadFileName01.Ext
 DownloadFileName02.Ext
 DownloadFileName03.Ext
 
-```
-Monitor Panel (5 seconds refresh)..
-```
-==== Monitoring Panel ====
-
-Total Rates:
-Download - XX.XX KB/s
-Upload - XX.XX KB/s
- 
 ```
 
 ## USAGE
