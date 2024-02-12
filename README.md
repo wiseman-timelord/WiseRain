@@ -1,9 +1,8 @@
 # WiseRain
 
 ### Status : Beta
-After leaving the given panels on for hours it was causing a hard-crash, it happened a lot less with the bandwidth monitor panel disabled, but still happened; I am currently testing some updates, they are present in v1.10...
-- Ensured timers are odd numbers, Monitor=5s, System=9s and Network=13s, for less clashing.
-- Ensured variables are unique with min 8 characters plus a 3 letter/number hash at end. 
+After leaving the given panels on for hours it was causing a hard-crash, it seems to be fixed in v1.10, what with the, non-sync timers and unique variables...
+- recombine bandwidth monitoring into the network panel, then make network panel 9s and the system panel 13s
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
