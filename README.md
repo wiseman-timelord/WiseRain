@@ -33,7 +33,7 @@ ProcessName02 - XXX.X MB
 ProcessName03 - XXX.X MB
 
 ```
-Network Panel (13 seconds refresh)..
+Network Panel (11 seconds refresh)..
 ```
 ====== Network Panel =====
 
