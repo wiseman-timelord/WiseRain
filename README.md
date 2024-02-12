@@ -1,7 +1,7 @@
 # WiseRain
 
 ### Status : Beta
-After fixing the stability in v1.10, the monitoring panel is now integrated with the network panel, hence, we are testing, also the panels are now balanced with regards to content, however, unfortunately there are to cpu temp on built-in cmdlets; we are testing v1.11. 
+After fixing the stability in v1.10, the monitoring panel is now integrated with the network panel, also the panels are now balanced with regards to content, however, unfortunately there are to cpu temp on built-in cmdlets; we are testing v1.11. 
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets.
