@@ -114,7 +114,7 @@ function Update {
     $Output = @(
         "====== Network Panel ======",
         "`nTransfer Rates:",
-        "Download - $($networkStats.InRate) KB/s",
+        "Dnload - $($networkStats.InRate) KB/s",
         "Upload - $($networkStats.OutRate) KB/s",
         "`nCurrent Connections:",
         $ConnectionInfo,

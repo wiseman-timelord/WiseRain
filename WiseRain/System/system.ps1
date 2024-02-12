@@ -9,11 +9,14 @@ function Get-ProcessorInfo {
     $CpuSpeed_7y4I = $Processor_6x9L.CurrentClockSpeed
     $Cores_3f8J = ($Processor_6x9L | Measure-Object -Property NumberOfCores -Sum).Sum
     $Threads_2g7K = ($Processor_6x9L | Measure-Object -Property NumberOfLogicalProcessors -Sum).Sum
-    if ($Cores_3f8J -and $Threads_2g7K) {
-        return "C$Cores_3f8J/T$Threads_2g7K - $CpuLoad_5t8U% - ${CpuSpeed_7y4I}MHz"
-    } elseif ($Threads_2g7K) {
-        return "T$Threads_2g7K - $CpuLoad_5t8U% - ${CpuSpeed_7y4I}MHz"
-    }
+    
+    # Updated to reflect your formatting preferences
+    $ProcessorInfo = @(
+        "Cores - $Cores_3f8J, Threads - $Threads_2g7K",
+        "Usage - $CpuLoad_5t8U%, Frq. - ${CpuSpeed_7y4I}MHz"
+    ) -join "`n"
+    
+    return $ProcessorInfo
 }
 
 # Function Get MemoryInfo
@@ -56,7 +59,7 @@ function Update {
     $ProcessInfo = Get-ProcessInfo
     $Output = @(
         "====== System Panel =======",
-		"`nProcessor Info:",
+        "`nProcessor Info:",
         $ProcessorInfo,
         "`nMemory Info:",
         $MemoryInfo,
