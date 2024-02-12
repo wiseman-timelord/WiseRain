@@ -6,10 +6,7 @@ After leaving the given panels on for hours it was causing a hard-crash, it seem
 
 
 ## DESCRIPTION
-Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets, therein...
-- V1.00 is a good lightweight base, for people wishing to develop their own powershell based scriptsm; newer versions have less comments too.
-- V1.05 has a few more, features and improvements, and uses a Psd1 file requiring saving each iteration of a <1kb temp file, while monitoring panel is active, but is deemed not safe.
-- V1.1 sees the monitoring on a separate panel, as well as safer, code and intervals, to update the psd1. 
+Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets.
 
 ### FEATURES
 - ** Dark Theme **: Designed for dark-themed desktops, where the background is dark-grey and the text is light-grey or white.
