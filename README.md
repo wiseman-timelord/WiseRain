@@ -21,7 +21,7 @@ System Panel  (9 seconds refresh)..
 
 Processor Info:
 Cores XX, Threads XX
-Usage - X% - Frq. XXXXMHz
+Usage - X%, Frq. XXXXMHz
 
 Memory Info:
 Memory - XX.XGB/XX.XGB
