@@ -75,7 +75,7 @@ DownloadFileName03.Ext
 
 ## Development
 Here are some possible directions for development...
-1. Add new stealthed script producing ongoing operation to fetch all values from all the cmdlets, other scripts will check for this, and if its not running, then run it; the same signal should reset a countdown untill the process stops running, for example 60 seconds to self termination; thus solving spamming cmdlets with stop/start. each request from the 3 scripts should result with the most recent stats from the stealth script's psd1 being sent back to the relevant 1 of the 3 scripts by the stealth script, this way, the cmdlets can be kept active and the psd1 can be safely written to/read from, and the process will not remain running while not in use.
+1. Cpu Usage seems too high, ensure this is the average for all cores, preferably some simple way to gain this; instead of for first cpu or whatever it is doing.
 2. Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
 3. A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight must be completed first).
 
