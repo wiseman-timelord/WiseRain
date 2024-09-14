@@ -1,5 +1,5 @@
 # WiseRain
-Status: Revisited 202409 - Much Improved.
+Status: Revisited 202409 - Much Improved, still an issue with the monitor stats being investigated, but that will be it then.
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, flashing powershell scripts on a delay, for lower processing, while utilizing "PowershellRM" plugin. Its an advanced custom rain-meter skin based on powershell scripts with all, of the other things in place and done through the use of cmdlets and built-in windows powershell. I associate it with programs like, Task Monitor or Process Hacker, as I would otherwise likely be gaining such info with such a program.
