@@ -15,9 +15,9 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 
 ## PREVIEW
 - The 3 panels...
-<br><img src="./media/wiserain_v113.jpg" align="center" alt="no image">.
+<br><img src="./media/wiserain_v113r3.jpg" align="center" alt="no image">.
 - Potential Desktop...
-<br><img src="./media/wiserain_desktop.jpg" align="center" alt="no image">.
+<br><img src="./media/wiserain_desktopr3.jpg" align="center" alt="no image">.
 
 ## USAGE
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
@@ -29,8 +29,6 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 ### NOTATION
 - When updating I suggest deleting the old "WiseRain" folder and replacing with the new, as, files and filenames, differ between versions, and yes this will require editing the variables again.
 - If you do not use a Ramdrive, then, change the drive letter and rename the label, to whatever...things should not be left to a dead location.
-
-
 
 ### REQUIREMENTS
 1. [RainMeter](https://www.rainmeter.net/) (to load the skin).
