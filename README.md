@@ -14,9 +14,9 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 
 ## PREVIEW
 - The 3 panels...
-<img src="./media/wiserain_v113.jpg" align="center" alt="no image">.
+<br><img src="./media/wiserain_v113.jpg" align="center" alt="no image">.
 - Potential Desktop...
-<img src="./media/wiserain_desktop.jpg" align="center" alt="no image">.
+<br><img src="./media/wiserain_desktop.jpg" align="center" alt="no image">.
 
 ## USAGE
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
