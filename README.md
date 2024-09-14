@@ -11,6 +11,7 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 - ** Plugin Enhancement **: Use of "PowershellRM" with, Ps1s and Psd1 (=>v1.02), for enhanced powershell support.
 - ** Compatibility **: Supports, IPv4 and truncated IPv6, display of IP address on network panel.
 - ** Real-World Units **: Monitoring of, Disk and Network bandwidth usage rate.
+- ** Text Graphics **: Monitoring of CPU Usage with text Graphics, example `Usage - 69% - ######     `.
 
 ## PREVIEW
 - The 3 panels (usb internet, no NIC stat on this occasion)...
@@ -36,7 +37,6 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 
 ## Development
 Here are some possible directions for development...
-1. Meters scaling by maximum bandwidth so far, displayed as for example `Disk Write: [######     ]`.
 1. Cpu Usage seems too high, ensure this is the average for all cores, preferably some simple way to gain this; instead of for first cpu or whatever it is doing.
 2. Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
 3. A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight must be completed first).
