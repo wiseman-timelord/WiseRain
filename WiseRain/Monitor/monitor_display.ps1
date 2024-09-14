@@ -1,7 +1,7 @@
 # Script: .\Monitor\monitor_display.ps1
 
 # Global Variables
-$Drive_Letter = "C:"  # Drive letter used for disk operations
+$Drive_Letter = "D"  # Drive letter used for disk operations
 $data = @{
     LastInbound = 0
     LastOutbound = 0
@@ -86,7 +86,7 @@ function Update {
         "Network Transfer Rates:-",
         "Download - $($networkStats.InRate)",
         "Upload - $($networkStats.OutRate)",
-        "Disk Transfer Rates:-",
+        "Drive $Drive_Letter Transfer Rates:-",
         "Read - $($diskStats.ReadRate)",
         "Write - $($diskStats.WriteRate)"
     ) -join "`n"

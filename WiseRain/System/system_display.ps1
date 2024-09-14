@@ -2,7 +2,7 @@
 
 # Global Variables
 $Global:TempDriveLetter_8d2M = "R" # Temporary Drive Letter
-$Global:TempDriveName_9r4K = "RamDrive" # Temporary Drive Name
+$Global:TempDriveName_9r4K = "RamDrive $TempDriveLetter_8d2M" # Temporary Drive Name
 
 # Function to get processor information
 function Get-ProcessorInfo {
@@ -13,12 +13,15 @@ function Get-ProcessorInfo {
     $Threads_2g7K = ($Processor_6x9L | Measure-Object -Property NumberOfLogicalProcessors -Sum).Sum
     
     # Create CPU usage bar
-    $UsageBar = "[" + ("#" * [math]::Round($CpuLoad_5t8U / 10)) + (" " * (10 - [math]::Round($CpuLoad_5t8U / 10))) + "]"
+    $UsageBar = ("#" * [math]::Round($CpuLoad_5t8U / 10)) + (" " * (10 - [math]::Round($CpuLoad_5t8U / 10)))
+    
+    # Calculate percentage
+    $CpuLoadPercentage = [math]::Round($CpuLoad_5t8U)
     
     if ($Cores_3f8J -and $Threads_2g7K) {
-        return "C$Cores_3f8J/T$Threads_2g7K - ${CpuSpeed_7y4I}MHz`nCPU Usage: $UsageBar"
+        return "C$Cores_3f8J/T$Threads_2g7K - ${CpuSpeed_7y4I}MHz`nUsage - $CpuLoadPercentage% - $UsageBar "
     } elseif ($Threads_2g7K) {
-        return "T$Threads_2g7K - ${CpuSpeed_7y4I}MHz`nCPU Usage: $UsageBar"
+        return "T$Threads_2g7K - ${CpuSpeed_7y4I}MHz`nUsage - $CpuLoadPercentage% - $UsageBar"
     }
 }
 
@@ -32,10 +35,10 @@ function Get-MemoryInfo {
 }
 
 # Get info for TempDrive
-function Get-TempOsDiskInfo {
-    $OsRamDisk_2h8L = Get-PSDrive $Global:TempDriveLetter_8d2M | Select-Object Used, Free
-    $UsedSpace_9k4L = [math]::Round($OsRamDisk_2h8L.Used / 1GB, 1)
-    $FreeSpace_8j3M = [math]::Round($OsRamDisk_2h8L.Free / 1GB, 1)
+function Get-TempDiskInfo {
+    $TempDiskSpace_2h8L = Get-PSDrive $Global:TempDriveLetter_8d2M | Select-Object Used, Free
+    $UsedSpace_9k4L = [math]::Round($TempDiskSpace_2h8L.Used / 1GB, 1)
+    $FreeSpace_8j3M = [math]::Round($TempDiskSpace_2h8L.Free / 1GB, 1)
     $TotalSpace_6i2N = $UsedSpace_9k4L + $FreeSpace_8j3M
     return "$Global:TempDriveName_9r4K - $UsedSpace_9k4L GB / $TotalSpace_6i2N GB"
 }
@@ -70,7 +73,7 @@ function Get-PageFileStatistics {
 function Update {
     $ProcessorInfo = Get-ProcessorInfo
     $MemoryInfo = Get-MemoryInfo
-    $TempOsDiskInfo = Get-TempOsDiskInfo
+    $TempDiskInfo = Get-TempDiskInfo
     $ProcessInfo = Get-ProcessInfo
     $PageFileInfo = Get-PageFileStatistics
     $Output = @(
@@ -80,7 +83,7 @@ function Update {
         "Memory Info:-",
         $MemoryInfo,
         $PageFileInfo,
-        $TempOsDiskInfo,
+        $TempDiskInfo,
         "Large Processes:-",
         $ProcessInfo
     ) -join "`n"
