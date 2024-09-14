@@ -20,6 +20,11 @@ function Get-NetworkStatistics {
     $currentOutbound = $networkInterface.SentBytes
     $inRate = (($currentInbound - $data.LastInbound) * 8) / 1KB / 5
     $outRate = (($currentOutbound - $data.LastOutbound) * 8) / 1KB / 5
+    
+    # Ensure no negative values
+    if ($inRate -lt 0) { $inRate = 0 }
+    if ($outRate -lt 0) { $outRate = 0 }
+
     $data.LastInbound = $currentInbound
     $data.LastOutbound = $currentOutbound
     return @{
@@ -28,12 +33,18 @@ function Get-NetworkStatistics {
     }
 }
 
+
 # Get memory statistics
 function Get-MemoryStatistics {
     $memoryCounter = Get-Counter '\Memory\Pages/sec'
     $currentMemoryPages = $memoryCounter.CounterSamples[0].CookedValue
     $memoryReadRate = ($currentMemoryPages - $data.LastMemoryRead) / 5
     $memoryWriteRate = ($currentMemoryPages - $data.LastMemoryWrite) / 5
+    
+    # Ensure no negative values
+    if ($memoryReadRate -lt 0) { $memoryReadRate = 0 }
+    if ($memoryWriteRate -lt 0) { $memoryWriteRate = 0 }
+
     $data.LastMemoryRead = $currentMemoryPages
     $data.LastMemoryWrite = $currentMemoryPages
     return @{
@@ -49,6 +60,11 @@ function Get-DiskStatistics {
     $currentDiskWrite = $diskCounter.CounterSamples[1].CookedValue
     $diskReadRate = ($currentDiskRead - $data.LastDiskRead) / 1KB / 5
     $diskWriteRate = ($currentDiskWrite - $data.LastDiskWrite) / 1KB / 5
+    
+    # Ensure no negative values
+    if ($diskReadRate -lt 0) { $diskReadRate = 0 }
+    if ($diskWriteRate -lt 0) { $diskWriteRate = 0 }
+
     $data.LastDiskRead = $currentDiskRead
     $data.LastDiskWrite = $currentDiskWrite
     return @{
