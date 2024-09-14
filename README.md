@@ -1,5 +1,6 @@
 # WiseRain
 Status: Working.
+The monitor stats do actuall move, but are performing irregularly, this is being looked at.
 
 ## DESCRIPTION
 Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, flashing powershell scripts on a delay, for lower processing, while utilizing "PowershellRM" plugin. Its an advanced custom rain-meter skin based on powershell scripts with all, of the other things in place and done through the use of cmdlets and built-in windows powershell. I associate it with programs like, Task Monitor or Process Hacker, as I would otherwise likely be gaining such info with such a program.
@@ -13,7 +14,7 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 - ** Real-World Units **: Monitoring of, Memory, Disk, Network bandwidth usage rate.
 
 ## PREVIEW
-- The 3 panels (the monitor stats do actuall move, but are performing irregularly)...
+- The 3 panels...
 <br><img src="./media/wiserain_v113.jpg" align="center" alt="no image">.
 - Potential Desktop...
 <br><img src="./media/wiserain_desktop.jpg" align="center" alt="no image">.
@@ -28,6 +29,8 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 ### NOTATION
 - When updating I suggest deleting the old "WiseRain" folder and replacing with the new, as, files and filenames, differ between versions, and yes this will require editing the variables again.
 - If you do not use a Ramdrive, then, change the drive letter and rename the label, to whatever...things should not be left to a dead location.
+
+
 
 ### REQUIREMENTS
 1. [RainMeter](https://www.rainmeter.net/) (to load the skin).
