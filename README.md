@@ -2,7 +2,7 @@
 Status: Working.
 
 ## DESCRIPTION
-Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, flashing powershell scripts on a delay, for lower processing, while utilizing "PowershellRM" plugin. Its an advanced custom rain-meter skin based on powershell scripts with all, of the other things in place and done through the use of cmdlets and built-in windows powershell.
+Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, flashing powershell scripts on a delay, for lower processing, while utilizing "PowershellRM" plugin. Its an advanced custom rain-meter skin based on powershell scripts with all, of the other things in place and done through the use of cmdlets and built-in windows powershell. I associate it with programs like, Task Monitor or Process Hacker, as I would otherwise likely be gaining such info with such a program.
 
 ### FEATURES
 - ** Dark Theme **: Designed for dark-themed desktops, where the background is dark and the text is light.
@@ -13,42 +13,10 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 - ** Real-World Units **: Monitoring of, Memory, Disk, Network bandwidth usage rate.
 
 ## PREVIEW
-System Panel  (9 seconds refresh)..
-```
-====== System Panel ======
-
-Processor Info:
-Cores XX, Threads XX
-Usage - X%, Frq. XXXXMHz
-
-Memory Info:
-Memory - XX.XGB/XX.XGB
-RamDrive - XX.XGB/XX.XGB
-
-Large Processes:
-ProcessName01 - XXX.X MB
-ProcessName02 - XXX.X MB
-ProcessName03 - XXX.X MB
-
-```
-Network Panel (11 seconds refresh)..
-```
-====== Network Panel =====
-
-Total Rates:
-Dnload - XX.XX KB/s
-Upload - XX.XX KB/s
-
-Current Connections:
-IP In - XXX.X.X.X
-IP Out - XXX.XXX.X.X
-
-Recent Downloads:
-DownloadFileName01.Ext
-DownloadFileName02.Ext
-DownloadFileName03.Ext
-
-```
+- The 3 panels...
+<img src="./media/wiserain_v113.jpg" align="center" alt="no image">.
+- Potential Desktop...
+<img src="./media/wiserain_desktop.jpg" align="center" alt="no image">.
 
 ## USAGE
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
