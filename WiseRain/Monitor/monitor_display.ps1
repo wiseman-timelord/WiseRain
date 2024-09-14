@@ -1,4 +1,4 @@
-# Script: .\Monitor\monitor_hardware.ps1
+# Script: .\Monitor\monitor_display.ps1
 
 # Global Variables
 $Drive_Letter = "C:"  # Drive letter used for disk operations
@@ -76,35 +76,19 @@ function Get-DiskStatistics {
     }
 }
 
-# Get page file usage statistics
-function Get-PageFileStatistics {
-    $pageFileCounters = Get-Counter '\Paging File(_Total)\% Usage', '\Paging File(_Total)\% Usage Peak'
-    $currentPageUsage = $pageFileCounters.CounterSamples[0].CookedValue
-    $currentPageUsagePeak = $pageFileCounters.CounterSamples[1].CookedValue
-
-    return @{
-        Usage = "{0:N1} %" -f $currentPageUsage
-        PeakUsage = "{0:N1} %" -f $currentPageUsagePeak
-    }
-}
-
 # Update Panel Display
 function Update {
     $networkStats = Get-NetworkStatistics
     $diskStats = Get-DiskStatistics
-    $pageFileStats = Get-PageFileStatistics
 
     $output = @(
-        "===== Hardware Monitor =====",
+        "===== Monitor Display =====",
         "Network Transfer Rates:-",
         "Download - $($networkStats.InRate)",
         "Upload - $($networkStats.OutRate)",
         "Disk Transfer Rates:-",
         "Read - $($diskStats.ReadRate)",
-        "Write - $($diskStats.WriteRate)",
-        "Page File Usage:-",
-        "Current Usage - $($pageFileStats.Usage)",
-        "Peak Usage - $($pageFileStats.PeakUsage)"
+        "Write - $($diskStats.WriteRate)"
     ) -join "`n"
     return $output
 }

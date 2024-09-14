@@ -11,10 +11,14 @@ function Get-ProcessorInfo {
     $CpuSpeed_7y4I = $Processor_6x9L.CurrentClockSpeed
     $Cores_3f8J = ($Processor_6x9L | Measure-Object -Property NumberOfCores -Sum).Sum
     $Threads_2g7K = ($Processor_6x9L | Measure-Object -Property NumberOfLogicalProcessors -Sum).Sum
+    
+    # Create CPU usage bar
+    $UsageBar = "[" + ("#" * [math]::Round($CpuLoad_5t8U / 10)) + (" " * (10 - [math]::Round($CpuLoad_5t8U / 10))) + "]"
+    
     if ($Cores_3f8J -and $Threads_2g7K) {
-        return "C$Cores_3f8J/T$Threads_2g7K - $CpuLoad_5t8U% - ${CpuSpeed_7y4I}MHz"
+        return "C$Cores_3f8J/T$Threads_2g7K - ${CpuSpeed_7y4I}MHz`nCPU Usage: $UsageBar"
     } elseif ($Threads_2g7K) {
-        return "T$Threads_2g7K - $CpuLoad_5t8U% - ${CpuSpeed_7y4I}MHz"
+        return "T$Threads_2g7K - ${CpuSpeed_7y4I}MHz`nCPU Usage: $UsageBar"
     }
 }
 
@@ -50,18 +54,32 @@ function Get-ProcessInfo {
     return $ProcessInfo_4m5N -join "`n"
 }
 
+# Get page file usage statistics
+function Get-PageFileStatistics {
+    $pageFileCounters = Get-Counter '\Paging File(_Total)\% Usage', '\Paging File(_Total)\% Usage Peak'
+    $currentPageUsage = $pageFileCounters.CounterSamples[0].CookedValue
+    $currentPageUsagePeak = $pageFileCounters.CounterSamples[1].CookedValue
+    $pageFileInfo = Get-WmiObject -Class Win32_PageFileUsage
+    $totalSize = ($pageFileInfo | Measure-Object -Property AllocatedBaseSize -Sum).Sum
+    $currentUsage = [math]::Round(($currentPageUsage / 100) * $totalSize, 2)
+    
+    return "PageFile - $currentUsage MB / $totalSize MB"
+}
+
 # Update panel display
 function Update {
     $ProcessorInfo = Get-ProcessorInfo
     $MemoryInfo = Get-MemoryInfo
     $TempOsDiskInfo = Get-TempOsDiskInfo
     $ProcessInfo = Get-ProcessInfo
+    $PageFileInfo = Get-PageFileStatistics
     $Output = @(
         "====== System Panel =======",
-		"Processor Info:-",
+        "Processor Info:-",
         $ProcessorInfo,
         "Memory Info:-",
         $MemoryInfo,
+        $PageFileInfo,
         $TempOsDiskInfo,
         "Large Processes:-",
         $ProcessInfo
