@@ -8,10 +8,10 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 ### FEATURES
 - ** Dark Theme **: Designed for dark-themed desktops, where the background is dark and the text is light.
 - ** User Friendly **: Use of powershell scripts with clearly commented global variables at the top, for customized readings.
-- ** Multi-Panel **: Currently has 3 panels, System and Network and Monitor.
+- ** Multi-Panel **: Currently has 3 modular panels, System and Network, and the recently enhanced Monitor.
 - ** Plugin Enhancement **: Use of "PowershellRM" with, Ps1s and Psd1 (=>v1.02), for enhanced powershell support.
 - ** Compatibility **: Supports, IPv4 and truncated IPv6, display of IP address on network panel.
-- ** Real-World Units **: Monitoring of, Memory, Disk, Network bandwidth usage rate.
+- ** Real-World Units **: Monitoring of, Disk and Network bandwidth usage rate.
 
 ## PREVIEW
 - The 3 panels...
