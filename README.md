@@ -19,6 +19,11 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 - Potential Desktop...
 <br><img src="./media/wiserain_desktop_116.jpg" align="center" alt="no image">.
 
+### REQUIREMENTS
+1. [RainMeter](https://www.rainmeter.net/) (to load the skin).
+2. Powershell => v3.0.
+3. [PowershellRM](https://github.com/khanhas/PowershellRM) (add to `.\Rainmeter\Plugins` folder for the enhanced powershell).
+
 ## USAGE
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
 2. Download `WiseRain` from the releases section, to a suitable location.
@@ -30,16 +35,5 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 - When updating, I suggest deleting the old "WiseRain" folder and replacing with the new, unless its a minor update, in which case replace/over-write.
 - If you do not use a Ramdrive, then, change the drive letter and rename the label, to whatever...things should not be left to a dead location.
 
-### REQUIREMENTS
-1. [RainMeter](https://www.rainmeter.net/) (to load the skin).
-2. Powershell => v3.0.
-3. [PowershellRM](https://github.com/khanhas/PowershellRM) (add to `.\Rainmeter\Plugins` folder for the enhanced powershell).
-
-## Development
-Here are some possible directions for development...
-1. Cpu Usage seems too high, ensure this is the average for all cores, preferably some simple way to gain this; instead of for first cpu or whatever it is doing.
-2. Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
-3. A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight must be completed first).
-- DO NOT DO: Top 3 bandwidh using apps, this required special libraries to achieve, at least it was not possible through, cmdlets and .net 4.0.
 ## DISCLAIMER
 This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
