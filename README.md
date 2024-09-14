@@ -20,13 +20,13 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 
 ## USAGE
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
-2. Download `Wiseman-Timelords Rainmeter Skin`, and then unpack it to a suitable location.
-3. Copy the `WiseRain` folder into your `RainMeter\Skins` folder.
-4. Edit the global variables at the top of the 3 powershell scripts, system and network and monitor, appropriately, to point to the appropriate locations for your setup
-5. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 3 panels from `WiseRain` in the, system and network and monitor, folders, as you normally would the panels of other skins.   
+2. Download `WiseRain` from the releases section, to a suitable location.
+3. Copy the `WiseRain` folder from the zip into your `RainMeter\Skins` folder.
+4. Edit the global variables at the top of the 3 powershell scripts appropriately, to point to the appropriate locations for your setup.
+5. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 3 panels, system and network and monitor, as you normally would the panels of other skins, you may not always wish to keep the monitor on.   
 
 ### NOTATION
-- When updating I suggest deleting the old "WiseRain" folder and replacing with the new, as, files and filenames, differ between versions, and yes this will require editing the variables again.
+- When updating, I suggest deleting the old "WiseRain" folder and replacing with the new, unless its a minor update, in which case replace/over-write.
 - If you do not use a Ramdrive, then, change the drive letter and rename the label, to whatever...things should not be left to a dead location.
 
 ### REQUIREMENTS
