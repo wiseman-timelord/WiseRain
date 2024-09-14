@@ -1,13 +1,31 @@
 # Script: .\Monitor\monitor_hardware.ps1
 
 # Global Variables
+$Drive_Letter = "C:"  # Drive letter used for disk operations
 $data = @{
     LastInbound = 0
     LastOutbound = 0
-    LastMemoryRead = 0
-    LastMemoryWrite = 0
     LastDiskRead = 0
     LastDiskWrite = 0
+}
+
+# Function to format values in KB/s, MB/s, GB/s
+function Convert-Rate {
+    param (
+        [double]$value
+    )
+    if ($value -ge 1GB) {
+        return "{0:N1} GB/s" -f ($value / 1GB)
+    }
+    elseif ($value -ge 1MB) {
+        return "{0:N1} MB/s" -f ($value / 1MB)
+    }
+    elseif ($value -ge 1KB) {
+        return "{0:N1} KB/s" -f ($value / 1KB)
+    }
+    else {
+        return "{0:N1} B/s" -f $value
+    }
 }
 
 # Get network statistics
@@ -18,38 +36,20 @@ function Get-NetworkStatistics {
     }
     $currentInbound = $networkInterface.ReceivedBytes
     $currentOutbound = $networkInterface.SentBytes
-    $inRate = (($currentInbound - $data.LastInbound) * 8) / 1KB / 5
-    $outRate = (($currentOutbound - $data.LastOutbound) * 8) / 1KB / 5
-    
-    # Ensure no negative values
+
+    $inRate = ($currentInbound - $data.LastInbound) / 5
+    $outRate = ($currentOutbound - $data.LastOutbound) / 5
+
+    # If rates are negative, handle as zero (assuming counter reset)
     if ($inRate -lt 0) { $inRate = 0 }
     if ($outRate -lt 0) { $outRate = 0 }
 
     $data.LastInbound = $currentInbound
     $data.LastOutbound = $currentOutbound
+
     return @{
-        InRate = [math]::Round($inRate, 1)
-        OutRate = [math]::Round($outRate, 1)
-    }
-}
-
-
-# Get memory statistics
-function Get-MemoryStatistics {
-    $memoryCounter = Get-Counter '\Memory\Pages/sec'
-    $currentMemoryPages = $memoryCounter.CounterSamples[0].CookedValue
-    $memoryReadRate = ($currentMemoryPages - $data.LastMemoryRead) / 5
-    $memoryWriteRate = ($currentMemoryPages - $data.LastMemoryWrite) / 5
-    
-    # Ensure no negative values
-    if ($memoryReadRate -lt 0) { $memoryReadRate = 0 }
-    if ($memoryWriteRate -lt 0) { $memoryWriteRate = 0 }
-
-    $data.LastMemoryRead = $currentMemoryPages
-    $data.LastMemoryWrite = $currentMemoryPages
-    return @{
-        ReadRate = [math]::Round($memoryReadRate, 1)
-        WriteRate = [math]::Round($memoryWriteRate, 1)
+        InRate = Convert-Rate $inRate
+        OutRate = Convert-Rate $outRate
     }
 }
 
@@ -58,37 +58,53 @@ function Get-DiskStatistics {
     $diskCounter = Get-Counter '\PhysicalDisk(_Total)\Disk Read Bytes/sec', '\PhysicalDisk(_Total)\Disk Write Bytes/sec'
     $currentDiskRead = $diskCounter.CounterSamples[0].CookedValue
     $currentDiskWrite = $diskCounter.CounterSamples[1].CookedValue
-    $diskReadRate = ($currentDiskRead - $data.LastDiskRead) / 1KB / 5
-    $diskWriteRate = ($currentDiskWrite - $data.LastDiskWrite) / 1KB / 5
-    
-    # Ensure no negative values
+
+    # Use direct read/write rates (per second counters)
+    $diskReadRate = $currentDiskRead
+    $diskWriteRate = $currentDiskWrite
+
+    # If rates are negative, handle as zero (assuming counter reset)
     if ($diskReadRate -lt 0) { $diskReadRate = 0 }
     if ($diskWriteRate -lt 0) { $diskWriteRate = 0 }
 
     $data.LastDiskRead = $currentDiskRead
     $data.LastDiskWrite = $currentDiskWrite
+
     return @{
-        ReadRate = [math]::Round($diskReadRate, 1)
-        WriteRate = [math]::Round($diskWriteRate, 1)
+        ReadRate = Convert-Rate $diskReadRate
+        WriteRate = Convert-Rate $diskWriteRate
+    }
+}
+
+# Get page file usage statistics
+function Get-PageFileStatistics {
+    $pageFileCounters = Get-Counter '\Paging File(_Total)\% Usage', '\Paging File(_Total)\% Usage Peak'
+    $currentPageUsage = $pageFileCounters.CounterSamples[0].CookedValue
+    $currentPageUsagePeak = $pageFileCounters.CounterSamples[1].CookedValue
+
+    return @{
+        Usage = "{0:N1} %" -f $currentPageUsage
+        PeakUsage = "{0:N1} %" -f $currentPageUsagePeak
     }
 }
 
 # Update Panel Display
 function Update {
     $networkStats = Get-NetworkStatistics
-    $memoryStats = Get-MemoryStatistics
     $diskStats = Get-DiskStatistics
+    $pageFileStats = Get-PageFileStatistics
+
     $output = @(
         "===== Hardware Monitor =====",
         "Network Transfer Rates:-",
-        "Download - $($networkStats.InRate) KB/s",
-        "Upload - $($networkStats.OutRate) KB/s",
-        "Memory Access Rates:-",
-        "Read - $($memoryStats.ReadRate) Pages/s",
-        "Write - $($memoryStats.WriteRate) Pages/s",
+        "Download - $($networkStats.InRate)",
+        "Upload - $($networkStats.OutRate)",
         "Disk Transfer Rates:-",
-        "Read - $($diskStats.ReadRate) KB/s",
-        "Write - $($diskStats.WriteRate) KB/s"
+        "Read - $($diskStats.ReadRate)",
+        "Write - $($diskStats.WriteRate)",
+        "Page File Usage:-",
+        "Current Usage - $($pageFileStats.Usage)",
+        "Peak Usage - $($pageFileStats.PeakUsage)"
     ) -join "`n"
     return $output
 }
