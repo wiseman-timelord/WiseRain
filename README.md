@@ -15,7 +15,7 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 
 ## PREVIEW
 - The 3 panels...
-<br><img src="./media/wiserain_v113r3.jpg" align="center" alt="no image">.
+<br><img src="./media/wiserain_v113r4.jpg" align="center" alt="no image">.
 - Potential Desktop...
 <br><img src="./media/wiserain_desktopr3.jpg" align="center" alt="no image">.
 
