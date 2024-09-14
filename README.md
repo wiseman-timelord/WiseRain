@@ -33,16 +33,9 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 2. Powershell => v3.0.
 3. [PowershellRM](https://github.com/khanhas/PowershellRM) (add to `.\Rainmeter\Plugins` folder for the enhanced powershell).
 
-### NOTATION
-- RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes, unless you have some kind of additional script running.
-- The three timers, with intervals of 5 seconds, 9 seconds, and 13 seconds, would synchronize every 585 seconds, and with intervals of 7 seconds, 11 seconds, and 15 seconds, then every 1,155 seconds.  
-- It is possible to use additional plugins for input on panels.
-- It is possible to use rainmeter as a gui for powershell projects.
--  
-
-
 ## Development
 Here are some possible directions for development...
+1. Meters scaling by maximum bandwidth so far, displayed as for example `Disk Write: [######     ]`.
 1. Cpu Usage seems too high, ensure this is the average for all cores, preferably some simple way to gain this; instead of for first cpu or whatever it is doing.
 2. Some kind of notation, top 5 important tasks, short note of for example 5 items with editing/input through plugin.
 3. A stripped down version of CreditSight in its own panel, with use of additional plugins there will be input box (CreditSight must be completed first).
