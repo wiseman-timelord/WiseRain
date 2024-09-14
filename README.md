@@ -1,18 +1,16 @@
 # WiseRain
-
-### Status : Beta
-After fixing the stability in v1.10, the monitoring panel is now integrated with the network panel, also the panels are now balanced with regards to content, however, unfortunately there are to cpu temp on built-in cmdlets; we are testing v1.11. 
+Status: Working.
 
 ## DESCRIPTION
-Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, that utilizes "PowershellRM", while it may not be necessary to be using this, it provides comprihensive future development potential. If looking for a blueprint to make an advanced custom rain-meter skin based on powershell scripts with all, of the basic requirements in place and done through the use of cmdlets.
+Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This skin is a PowerShell focused skin, flashing powershell scripts on a delay, for lower processing, while utilizing "PowershellRM" plugin. Its an advanced custom rain-meter skin based on powershell scripts with all, of the other things in place and done through the use of cmdlets and built-in windows powershell.
 
 ### FEATURES
-- ** Dark Theme **: Designed for dark-themed desktops, where the background is dark-grey and the text is light-grey or white.
+- ** Dark Theme **: Designed for dark-themed desktops, where the background is dark and the text is light.
 - ** User Friendly **: Use of powershell scripts with clearly commented global variables at the top, for customized readings.
-- ** Multi-Panel **: Currently has 2 panels, System and Network.
+- ** Multi-Panel **: Currently has 3 panels, System and Network and Monitor.
 - ** Plugin Enhancement **: Use of "PowershellRM" with, Ps1s and Psd1 (=>v1.02), for enhanced powershell support.
 - ** Compatibility **: Supports, IPv4 and truncated IPv6, display of IP address on network panel.
-- ** Real-World Units **: Bandwidth monitoring is in KB/s not Kb/s.
+- ** Real-World Units **: Monitoring of, Memory, Disk, Network bandwidth usage rate.
 
 ## PREVIEW
 System Panel  (9 seconds refresh)..
@@ -72,6 +70,8 @@ DownloadFileName03.Ext
 - The three timers, with intervals of 5 seconds, 9 seconds, and 13 seconds, would synchronize every 585 seconds, and with intervals of 7 seconds, 11 seconds, and 15 seconds, then every 1,155 seconds.  
 - It is possible to use additional plugins for input on panels.
 - It is possible to use rainmeter as a gui for powershell projects.
+-  
+
 
 ## Development
 Here are some possible directions for development...
