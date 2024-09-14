@@ -22,8 +22,8 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 1. Download and Install, the plugin [PowershellRM](https://github.com/khanhas/PowershellRM) into your `Rainmeter/Plugins` folder.
 2. Download `Wiseman-Timelords Rainmeter Skin`, and then unpack it to a suitable location.
 3. Copy the `WiseRain` folder into your `RainMeter\Skins` folder.
-4. Edit the global variables at the top of, ".\system\System.ps1" and ".\network\Netork.ps1", to point to the appropriate locations. If you do not use a Ramdrive, then set the, drive letter and rename the label, to TempDrive D??, failing that, then the SystemDrive C; it should not be left to a dead location, for good practice.
-5. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 2 panels from `WiseRain` named, `system.ini` and `network.ini`, as you normally would the panels of other skins.   
+4. Edit the global variables at the top of the 2 powershell scripts, system and network, appropriately, to point to the appropriate locations. If you do not use a Ramdrive, then, change the drive letter and rename the label, to whatever, things should not be left to a dead location.
+5. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 3 panels from `WiseRain` in the, system and network and monitor, folders, as you normally would the panels of other skins.   
 
 ### UPDATING
 - When updating I suggest deleting the old "WiseTime-RM" folder and replacing with the new, as, files and filenames, differ between versions, and yes this will require editing the variables again.
@@ -31,7 +31,7 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 ### REQUIREMENTS
 1. [RainMeter](https://www.rainmeter.net/) (to load the skin).
 2. Powershell => v3.0.
-3. [PowershellRM](https://github.com/khanhas/PowershellRM) (plugin for enhanced powershell support).
+3. [PowershellRM](https://github.com/khanhas/PowershellRM) (add to `.\Rainmeter\Plugins` folder for the enhanced powershell).
 
 ### NOTATION
 - RainMeter will flash up a script, you cannot use loops and variables cannot sustain changes, unless you have some kind of additional script running.
