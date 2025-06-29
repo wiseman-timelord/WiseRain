@@ -1,8 +1,7 @@
 # Script: system_display.ps1
 
 # Global Variables
-$Global:TempDriveLetter_8d2M = "R" # Temporary Drive Letter
-$Global:TempDriveName_9r4K = "RamDrive $TempDriveLetter_8d2M" # Temporary Drive Name
+# REMOVED ramdrive variables
 
 # Function to get processor information
 function Get-ProcessorInfo {
@@ -34,14 +33,7 @@ function Get-MemoryInfo {
     return "Memory - $UsedMemory_5s9P GB / $TotalMemory_7r5M GB"
 }
 
-# Get info for TempDrive
-function Get-TempDiskInfo {
-    $TempDiskSpace_2h8L = Get-PSDrive $Global:TempDriveLetter_8d2M | Select-Object Used, Free
-    $UsedSpace_9k4L = [math]::Round($TempDiskSpace_2h8L.Used / 1GB, 1)
-    $FreeSpace_8j3M = [math]::Round($TempDiskSpace_2h8L.Free / 1GB, 1)
-    $TotalSpace_6i2N = $UsedSpace_9k4L + $FreeSpace_8j3M
-    return "$Global:TempDriveName_9r4K - $UsedSpace_9k4L GB / $TotalSpace_6i2N GB"
-}
+# REMOVED Get-TempDiskInfo function
 
 # Function Get ProcessInfo
 function Get-ProcessInfo {
@@ -73,7 +65,6 @@ function Get-PageFileStatistics {
 function Update {
     $ProcessorInfo = Get-ProcessorInfo
     $MemoryInfo = Get-MemoryInfo
-    $TempDiskInfo = Get-TempDiskInfo
     $ProcessInfo = Get-ProcessInfo
     $PageFileInfo = Get-PageFileStatistics
     $Output = @(
@@ -83,7 +74,6 @@ function Update {
         "Memory Info:-",
         $MemoryInfo,
         $PageFileInfo,
-        $TempDiskInfo,
         "Large Processes:-",
         $ProcessInfo
     ) -join "`n"
