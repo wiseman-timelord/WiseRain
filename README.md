@@ -32,7 +32,8 @@ Here is the official Wiseman-Timelord RainMeter skin, yes there is one. This ski
 5. Load rain meter or Refresh the skins display, then navigate in the folders in RainMeter, load the 3 panels, system and network and monitor, as you normally would the panels of other skins, you may not always wish to keep the monitor on.   
 
 ### NOTATION
-- No ramdrive stat, as scanning drives repeatingly is not good.
+- Network Stat is on Network port, it is not designed to work on USB internet (panel can be turned off).
+- No ramdrive stat, as scanning drives repeatingly is not good. (images need updating).
 - When updating, I suggest deleting the old "WiseRain" folder and replacing with the new, unless its a minor update, in which case replace/over-write.
 - If you do not use a Ramdrive, then, change the drive letter and rename the label, to whatever...things should not be left to a dead location.
 
